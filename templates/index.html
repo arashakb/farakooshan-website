@@ -1,9 +1,9 @@
+{% load static %}
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="{% static 'CSS/styles.css' %}">
 
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
@@ -24,7 +24,7 @@
         <div>
             <nav class="flex-wrap lg:flex items-center px-4 navbar" x-data="{navbarOpen:false}">
                 <div class="flex items-center mb-10 lg:mb-0">
-                    <img src="./images/logo-icon.png" alt="Logo">
+                    <img src="{% static 'images/logo-icon.png' %}" alt="Logo">
                     <h1 class="text-xl text-gray-700 font-bold">Mobility Oil & Gas</h1>
                     <button
                         class="lg:hidden w-10 h-10 ml-auto flex items-center justify-center border border-blue-500 text-blue-500 rounded-md"
@@ -87,7 +87,7 @@
     <section class="p-16 border grid md:grid-cols-2 gap-5 underHero bg-gray-200">
         <div class="col-span-1 relative  transition ease-in-out duration-500 container_hover mb-4">
             <a href="#">
-                <img class="img--underHero" src="images/back1.jpg" alt="working">
+                <img class="img--underHero" src="{% static 'images/back1.jpg' %}" alt="working">
                 <h1 class="absolute top-0 mt-3 ml-3 text-xl md:text-2xl text">Bespoken Training Course</h1>
                 <div class="absolute bottom-0 right-0 w-16 py-4 flex justify-center bg-orange-700 text-white">
                     <i data-feather="chevron-right"></i>
@@ -97,7 +97,7 @@
         </div>
         <div class="col-span-1 relative  transition ease-in-out duration-500 container_hover mb-4">
             <a href="#">
-                <img class="img--underHero" src="images/back1.jpg" alt="working">
+                <img class="img--underHero" src="{% static 'images/back1.jpg' %}" alt="working">
                 <h1 class="absolute top-0 mt-3 ml-3 text-xl md:text-2xl text">Bespoken Training Course</h1>
                 <div class="absolute bottom-0 right-0 w-16 py-4 flex justify-center bg-orange-700 text-white">
                     <i data-feather="chevron-right"></i>
@@ -207,10 +207,10 @@
     <section class="mt-11">
         <h1 class="text-center text-xl font-semibold">Our Client</h1>
         <div class="grid grid-cols-4 px-24">
-            <img class="w-48" src="./images/Clients/pdvsa_logo (1).webp" alt="">
-            <img class="w-48" src="./images/Clients/l-oceaneering.webp" alt="">
-            <img class="w-48" src="./images/Clients/l-pemex.webp" alt="">
-            <img class="w-48" src="./images/Clients/pdvsa_logo.webp" alt="">
+            <img class="w-48" src="{% static 'images/Clients/pdvsa_logo (1).webp' %}" alt="">
+            <img class="w-48" src="{% static 'images/Clients/l-oceaneering.webp' %}" alt="">
+            <img class="w-48" src="{% static 'images/Clients/l-pemex.webp' %}" alt="">
+            <img class="w-48" src="{% static 'images/Clients/pdvsa_logo.webp' %}" alt="">
         </div>
     </section>
 
