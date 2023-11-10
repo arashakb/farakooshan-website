@@ -1,9 +1,9 @@
-{% load static %}
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'CSS/styles.css' %}">
+    <link rel="stylesheet" href="CSS/styles.css">
 
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
@@ -22,48 +22,64 @@
     <!-- navbar section -->
     <section>
         <div>
-            <nav class="flex-wrap lg:flex items-center px-4 navbar" x-data="{navbarOpen:false}">
+            <div class="p-1 border-b-2 lg:flex flex-col md:flex-row md:items-center text-center md:space-x-6 justify-center md:justify-end" :class="{'hidden':!navbarOpen,'flex':navbarOpen}">
+                <a href="#" class="group py-1 px-3 flex text-[#3c3c3b] font-semibold text-xs rounded-md hover:text-orange-700 transition ease-in-out duration-500 mb-5 md:mb-0">
+                    <div class="mr-3 text-orange-700 ">
+                        <i data-feather="log-in"></i>
+                    </div>
+                    <h1 class="group-hover:text-orange-700 text-[#3c3c3b]">Sign in | Register</h1>
+                </a>
+                <a href="#" class="group px-3 py-1 flex text-[#3c3c3b] font-semibold text-xs rounded-md transition ease-linear duration-200">
+                    <div class="mr-3 text-orange-700 ">
+                        <i data-feather="calendar"></i>
+                    </div>
+                    <h1 class="group-hover:text-orange-700 text-[#3c3c3b]">Bookings</h1>
+                </a>
+            </div>
+            <nav class="text-[#3c3c3b] flex-wrap lg:flex items-center px-4 navbar" x-data="{navbarOpen:false}">
                 <div class="flex items-center mb-10 lg:mb-0">
-                    <img src="{% static 'images/logo-icon.png' %}" alt="Logo">
-                    <h1 class="text-xl text-gray-700 font-bold">Mobility Oil & Gas</h1>
+                    <img src="./images/logo-icon.png" alt="Logo">
+                    <h1 class="text-xl text-[#3c3c3b] font-bold">Mobility Oil & Gas</h1>
                     <button
-                        class="lg:hidden w-10 h-10 ml-auto flex items-center justify-center border border-blue-500 text-blue-500 rounded-md"
+                        class="lg:hidden w-10 h-10 ml-auto flex items-center justify-center border border-orange-700 text-orange-700 rounded-md"
                         @click="navbarOpen = !navbarOpen">
                         <i data-feather="menu"></i>
                     </button>
                 </div>
-                <ul class="lg:flex flex-col lg:flex-row lg:items-center lg:mx-auto lg:space-x-8 xl:space-x-14"
+                <ul class="lg:flex flex-col lg:flex-row lg:items-center lg:space-x-8 xl:space-x-14 justify-end main-menu-ul"
                     :class="{'hidden':!navbarOpen,'flex':navbarOpen}">
-                    <li class="font-semibold text-gray-900 hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
+                    <li class="font-semibold text-[#3c3c3b] hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
                         <a href="#">Home</a>
                     </li>
-                    <li class="font-semibold text-gray-900 hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
-                        <a href="./pages/courses.html">Courses
-                            <ul class="submenu">
-                                <li><a href="#">course 1</a></li>
-                                <li><a href="#">course 2</a></li>
-                                <li><a href="#">course 3</a></li>
-                                <li><a href="#">course 4</a></li> 
-                            </ul>
+                    <li class="font-semibold text-[#3c3c3b] hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
+                        <a href="./pages/courses.html" class="flex">
+                            <h1>Courses</h1>
+                            <div class="ml-2 text-orange-700 items-center mt-1">
+                                <i data-feather="chevron-down"></i>
+                            </div>
                         </a>
+                            <ul class="submenu">
+                                <li><a href="#">Geology Courses</a></li>
+                                <li><a href="#">Health and Safety Courses</a></li>
+                                <li><a href="#">Corrosion Engineering Courses</a></li>
+                                <li><a href="#">Petrophysics Courses</a></li> 
+                            </ul>
                     </li>
-                    <li class="font-semibold text-gray-900 hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
+                    <li class="font-semibold text-[#3c3c3b] hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
+                        <a href="#">Consultancy</a>
+                    </li>
+                    <li class="font-semibold text-[#3c3c3b] hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
+                        <a href="#">Articles</a>
+                    </li>
+                    <li class="font-semibold text-[#3c3c3b] hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
                         <a href="#">About us</a>
                     </li>
-                    <li class="font-semibold text-gray-900 hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
+                    <li class="font-semibold text-[#3c3c3b] hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
                         <a href="#">Contact</a>
                     </li>
                 </ul>
 
-                <div class="lg:flex flex-col md:flex-row md:items-center text-center md:space-x-6"
-                    :class="{'hidden':!navbarOpen,'flex':navbarOpen}">
-                    <a href="#"
-                        class="px-4 py-3 bg-orange-700 text-white font-semibold text-sm rounded-md hover:bg-orange-700 transition ease-in-out duration-500 mb-5 md:mb-0">Join</a>
-
-                    <a href="#"
-                        class="px-4 py-3 border-2 border-orange-700 text-orange-700 font-semibold text-sm rounded-md hover:bg-orange-700 hover:text-white transition ease-linear duration-500">Become
-                        a member</a>
-                </div>
+                
             </nav>
         </div> <!-- container.// -->
     </section>
@@ -87,28 +103,30 @@
     <section class="p-16 border grid md:grid-cols-2 gap-5 underHero bg-gray-200">
         <div class="col-span-1 relative  transition ease-in-out duration-500 container_hover mb-4">
             <a href="#">
-                <img class="img--underHero" src="{% static 'images/back1.jpg' %}" alt="working">
-                <h1 class="absolute top-0 mt-3 ml-3 text-xl md:text-2xl text">Bespoken Training Course</h1>
-                <div class="absolute bottom-0 right-0 w-16 py-4 flex justify-center bg-orange-700 text-white">
-                    <i data-feather="chevron-right"></i>
-                </div>
                 <div class="overlay absolute top-0 bottom-0 left-0 right-0"></div>
+                    <img class="img--underHero" src="images/back1.jpg" alt="working">
+                    <h1 class="absolute top-0 mt-3 ml-3 text-xl md:text-2xl text">Bespoken Training Course</h1>
+                    <div class="absolute bottom-0 right-0 w-16 py-4 flex justify-center bg-orange-700 text-white">
+                        <i data-feather="chevron-right"></i>
+                    </div>
+                
             </a>
         </div>
         <div class="col-span-1 relative  transition ease-in-out duration-500 container_hover mb-4">
             <a href="#">
-                <img class="img--underHero" src="{% static 'images/back1.jpg' %}" alt="working">
-                <h1 class="absolute top-0 mt-3 ml-3 text-xl md:text-2xl text">Bespoken Training Course</h1>
-                <div class="absolute bottom-0 right-0 w-16 py-4 flex justify-center bg-orange-700 text-white">
-                    <i data-feather="chevron-right"></i>
-                </div>
-                <div class="overlay absolute top-0 bottom-0 left-0 right-0"></div>
+                <div class="group overlay absolute top-0 bottom-0 left-0 right-0"></div>
+                    <img class="img--underHero" src="images/back1.jpg" alt="working">
+                    <h1 class="absolute top-0 mt-3 ml-3 text-xl md:text-2xl text">Bespoken Training Course</h1>
+                    <div class="absolute bottom-0 right-0 w-16 py-4 flex justify-center bg-orange-700 text-white group-hover:bg-white group-hover:text-orange-700">
+                        <i data-feather="chevron-right"></i>
+                    </div>
+               
             </a>
         </div>
     </section>
 
 
-    <section class="bg-white AboutCard py-8 md:mt-10 flex items-center justify-center">
+    <section class="bg-white AboutCard py-8 md:mt-10 flex items-center justify-center text-[#3c3c3b]">
         <div class="text-center">
             <h3 class="text-4xl text-center p-3">Oil & Gas Consultancy Services</h3>
             <p class="text-center">
@@ -124,9 +142,7 @@
                 management to maximize recovery from both new and mature fields.
             </p>
             <br /><br />
-            <button
-                class="home-about-btn px-3 py-1 bg-white font-semibold text-orange-700 text-lg rounded-sm hover:bg-orange-700 hover:text-white transition ease-in-out duration-500 border border-orange-700">About</button>
-
+            <button class="home-about-btn px-3 py-1 bg-white font-semibold text-orange-700 text-lg rounded-sm hover:bg-orange-700 hover:text-white transition ease-in-out duration-500 border border-orange-700">About</button>
         </div>
 
     </section>
@@ -207,10 +223,10 @@
     <section class="mt-11">
         <h1 class="text-center text-xl font-semibold">Our Client</h1>
         <div class="grid grid-cols-4 px-24">
-            <img class="w-48" src="{% static 'images/Clients/pdvsa_logo (1).webp' %}" alt="">
-            <img class="w-48" src="{% static 'images/Clients/l-oceaneering.webp' %}" alt="">
-            <img class="w-48" src="{% static 'images/Clients/l-pemex.webp' %}" alt="">
-            <img class="w-48" src="{% static 'images/Clients/pdvsa_logo.webp' %}" alt="">
+            <img class="w-48" src="./images/Clients/pdvsa_logo (1).webp" alt="">
+            <img class="w-48" src="./images/Clients/l-oceaneering.webp" alt="">
+            <img class="w-48" src="./images/Clients/l-pemex.webp" alt="">
+            <img class="w-48" src="./images/Clients/pdvsa_logo.webp" alt="">
         </div>
     </section>
 
