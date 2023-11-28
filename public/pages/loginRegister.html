@@ -1,10 +1,9 @@
-{% load static %}
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'CSS/styles.css' %}">
+    <link rel="stylesheet" href="../CSS/styles.css">
 
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
@@ -20,29 +19,28 @@
 
 <body class="font-body">
 
-    <!-- navbar section -->
     <section>
         <div>
             <div class="p-1 border-b-2 lg:flex flex-col md:flex-row md:items-center text-center md:space-x-6 justify-center md:justify-end" :class="{'hidden':!navbarOpen,'flex':navbarOpen}">
-                <a href="#" class="group py-1 px-3 flex text-[#3c3c3b] font-semibold text-xs rounded-md hover:text-[#005797] transition ease-in-out duration-500 mb-5 md:mb-0">
-                    <div class="mr-3 text-[#005797] ">
+                <a href="#" class="group py-1 px-3 flex text-[#3c3c3b] font-semibold text-xs rounded-md hover:text-orange-700 transition ease-in-out duration-500 mb-5 md:mb-0">
+                    <div class="mr-3 text-orange-700 ">
                         <i data-feather="log-in"></i>
                     </div>
-                    <h1 class="group-hover:text-[#005797] text-[#3c3c3b]">Sign in | Register</h1>
+                    <h1 class="group-hover:text-orange-700 text-[#3c3c3b]">Sign in | Register</h1>
                 </a>
                 <a href="#" class="group px-3 py-1 flex text-[#3c3c3b] font-semibold text-xs rounded-md transition ease-linear duration-200">
-                    <div class="mr-3 text-[#005797] ">
+                    <div class="mr-3 text-orange-700 ">
                         <i data-feather="calendar"></i>
                     </div>
-                    <h1 class="group-hover:text-[#005797] text-[#3c3c3b]">Bookings</h1>
+                    <h1 class="group-hover:text-orange-700 text-[#3c3c3b]">Bookings</h1>
                 </a>
             </div>
             <nav class="text-[#3c3c3b] flex-wrap lg:flex items-center px-4 navbar" x-data="{navbarOpen:false,subnavbarOpen:false }">
                 <div class="flex items-center mb-10 lg:mb-0">
-                    <img class="logo" src="{% static 'images/logo.jpg' %}" alt="Logo">
+                    <img class="logo" src="../images/logo.jpg" alt="Logo">
                     <h1 class="text-xl text-[#3c3c3b] font-bold">Farakooshan</h1>
                     <button
-                        class="lg:hidden w-10 h-10 ml-auto flex items-center justify-center border border-[#005797] text-[#005797] rounded-md"
+                        class="lg:hidden w-10 h-10 ml-auto flex items-center justify-center border border-orange-700 text-orange-700 rounded-md"
                         @click="navbarOpen = !navbarOpen">
                         <i data-feather="menu"></i>
                     </button>
@@ -53,32 +51,28 @@
                     <li class="font-semibold text-[#3c3c3b] hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
                         <a href="#">Home</a>
                     </li>
-                    <li class="font-semibold text-[#252525] hover:text-[#252525] transition ease-in-out duration-100 mb-5 lg:mb-0">
-                        <a href="{% static 'pages/courses.html' %}" class="flex">
+                    <li class="font-semibold text-[#3c3c3b] hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
+                        <a href="./pages/courses.html" class="flex">
                             <h1>Courses</h1>
-                            <div class="ml-2 text-[#005797] items-center mt-1">
+                            <div class="ml-2 text-orange-700 items-center mt-1">
                                 <i data-feather="chevron-down"></i>
                             </div>
                         </a>
                         
-                        <ul class="submenu grid grid-cols-1 md:grid-cols-3 text-sm" >
-                            <li class="col-span-1 w-full p-3"><div class="w-full border-b-[#005797] border-b-2 pb-2" href="#"><a href="">Engineering</a></div>
+                        <ul class="submenu absolute" >
+                            <li><a href="#">Engineering</a>
                                 <div class="subsubmenu relative">
-                                    <ul class="text-[#005797]">
-                                        <li class="grid grid-cols-2">
-                                            <div class="ml-2 text-[#005797] items-center mt-1">
-                                                <i data-feather="chevron-right"></i>
-                                            </div>
-                                            <a href="#">Articles</a>
-                                        </li>   
+                                    <ul>
+                                        <li><a href="#">Articles</a></li>
                                         <li><a href="#">Movies</a></li>
                                         <li><a href="#">Assesments</a></li>
                                     </ul>
+
                                 </div>
                             </li>
-                            <li class="col-span-1"><a href="#">Operation & Maintenance</a>
+                            <li><a href="#">Operation & Maintenance</a>
                                 <div class="subsubmenu relative">
-                                    <ul class="text-[#005797]">
+                                    <ul>
                                         <li><a href="#">Articles</a></li>
                                         <li><a href="#">Movies</a></li>
                                         <li><a href="#">Assesments</a></li>
@@ -88,7 +82,7 @@
                             </li>
                             <li><a href="#">HSE</a>
                                 <div class="subsubmenu relative">
-                                    <ul class="text-[#005797]">
+                                    <ul>
                                         <li><a href="#">Articles</a></li>
                                         <li><a href="#">Movies</a></li>
                                         <li><a href="#">Assesments</a></li>
@@ -98,7 +92,7 @@
                             </li>
                             <li><a href="#">Control & Instrument</a>
                                 <div class="subsubmenu relative">
-                                    <ul class="text-[#005797]">
+                                    <ul>
                                         <li><a href="#">Articles</a></li>
                                         <li><a href="#">Movies</a></li>
                                         <li><a href="#">Assesments</a></li>
@@ -108,7 +102,7 @@
                             </li>
                             <li><a href="#">Inspection</a>
                                 <div class="subsubmenu relative">
-                                    <ul class="text-[#005797]">
+                                    <ul>
                                         <li><a href="#">Articles</a></li>
                                         <li><a href="#">Movies</a></li>
                                         <li><a href="#">Assesments</a></li>
@@ -118,7 +112,7 @@
                             </li>
                             <li><a href="#">Standards</a>
                                 <div class="subsubmenu relative">
-                                    <ul class="text-[#005797]">
+                                    <ul>
                                         <li><a href="#">Articles</a></li>
                                         <li><a href="#">Movies</a></li>
                                         <li><a href="#">Assesments</a></li>
@@ -128,7 +122,7 @@
                             </li>
                             <li><a href="#">Energy Saving</a>
                                 <div class="subsubmenu relative">
-                                    <ul class="text-[#005797]" \>
+                                    <ul>
                                         <li><a href="#">Articles</a></li>
                                         <li><a href="#">Movies</a></li>
                                         <li><a href="#">Assesments</a></li>
@@ -138,7 +132,7 @@
                             </li>
                             <li><a href="#">AI & Machine Learning</a>
                                 <div class="subsubmenu relative">
-                                    <ul class="text-[#005797]">
+                                    <ul>
                                         <li><a href="#">Articles</a></li>
                                         <li><a href="#">Movies</a></li>
                                         <li><a href="#">Assesments</a></li>
@@ -148,7 +142,7 @@
                             </li>
                             <li><a href="#">Physical Asset Management</a>
                                 <div class="subsubmenu relative">
-                                    <ul class="text-[#005797]">
+                                    <ul>
                                         <li><a href="#">Articles</a></li>
                                         <li><a href="#">Movies</a></li>
                                         <li><a href="#">Assesments</a></li>
@@ -158,7 +152,7 @@
                             </li>
                             <li><a href="#">Training Need Analysis (TNA)</a>
                                 <div class="subsubmenu relative">
-                                    <ul class="text-[#005797]">
+                                    <ul>
                                         <li><a href="#">Articles</a></li>
                                         <li><a href="#">Movies</a></li>
                                         <li><a href="#">Assesments</a></li>
@@ -188,12 +182,57 @@
             </nav>
         </div> <!-- container.// -->
     </section>
-    <!-- navbar section //end -->
 
+    <div class="bg-gray-200 p-3">
+    <div class="p-10 w-3/4 justify-center m-auto bg-white mt-4 mb-5">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-40">
+            <div>
+                <h1 class="mb-8 font-extrabold text-sm">Login</h1>
+                <form>
+                    <div>
+                        <label class="block font-semibold" for="name">Phone Number</label>
+                        <input class="w-full shadow-inner bg-gray-100 rounded-sm placeholder-black text-xl p-1 border-none block mt-1" id="name" type="text" name="name" required="required" autofocus="autofocus">
+                    </div>
+        
+                    <div class="mt-4">
+                        <label class="block font-semibold" for="password">Password</label>
+                        <input class="w-full shadow-inner bg-gray-100 rounded-sm placeholder-black text-xl p-1 border-none block mt-1" id="password" type="password" name="password" required="required" autocomplete="new-password">
+                    </div>
+        
+                    <div class="items-center justify-between mt-8">
+                        <h1 class="p-4 text-gray-500">Forot your password?</h1>
+                        <button type="submit" class="w-full flex items-center justify-center p-1 border border-transparent text-base font-medium rounded-md text-white bg-[#005797] hover:bg-[#000831] md:py-1 md:text-sm md:px-1">Log In</button>
+                    </div>
+                </form>
+            </div>
+            
+            <div>
+                <h1 class="mb-8 font-extrabold text-sm">Register</h1>
+                <form>
+                    <div>
+                        <label class="block font-semibold" for="name">Phone Number</label>
+                        <input class="w-full shadow-inner bg-gray-100 rounded-sm placeholder-black text-xl p-1 border-none block mt-1" id="name" type="text" name="name" required="required" autofocus="autofocus">
+                    </div>
 
-    {% block content %}
-    
-    {% endblock %}
+                    <div class="mt-4">
+                        <label class="block font-semibold" for="password">Password</label>
+                        <input class="w-full shadow-inner bg-gray-100 rounded-sm placeholder-black text-xl p-1 border-none block mt-1" id="password" type="password" name="password" required="required" autocomplete="new-password">
+                    </div>
+                    
+                    <div class="mt-4">
+                        <label class="block font-semibold" for="password">Confirm Password</label>
+                        <input class="w-full shadow-inner bg-gray-100 rounded-sm placeholder-black text-xl p-1 border-none block mt-1" id="password" type="password" name="password" required="required" autocomplete="new-password">
+                    </div>
+
+                    <div class="flex items-center justify-between mt-8">
+                        <button type="submit" class="w-full flex items-center justify-center p-1 border border-transparent text-base font-medium rounded-md text-white bg-[#005797] hover:bg-[#000831] md:p-1 md:text-sm ">Register</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
 
 
     <footer class="bg-white py-16">
@@ -203,7 +242,7 @@
 
                 <div class="space-y-7 mb-10 lg:mb-0">
                     <div class="flex justify-center lg:justify-start">
-                        <img src="{% static 'assets/image/footer-logo.png' %}" alt="Image">
+                        <img src="assets/image/footer-logo.png" alt="Image">
                     </div>
 
                     <p class="font-light text-gray-400 text-md md:text-lg text-center lg:text-left">Donate and help

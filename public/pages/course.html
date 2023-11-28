@@ -1,0 +1,298 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/styles.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js"
+        integrity="sha512-7x3zila4t2qNycrtZ31HO0NnJr8kg2VI67YLoRSyi9hGhRN66FHYWr7Axa9Y1J9tGYHVBPqIjSE1ogHrJTz51g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+
+    <title>Document</title>
+</head>
+
+<body class="font-body">
+
+        <!-- navbar section -->
+        <section>
+            <div>
+                <nav class="flex-wrap lg:flex items-center px-4 navbar" x-data="{navbarOpen:false}">
+                    <div class="flex items-center mb-10 lg:mb-0">
+                        <img src="../images/logo-icon.png" alt="Logo">
+                        <h1 class="text-xl text-gray-700 font-bold">Mobility Oil & Gas</h1>
+                        <button
+                            class="lg:hidden w-10 h-10 ml-auto flex items-center justify-center border border-blue-500 text-blue-500 rounded-md"
+                            @click="navbarOpen = !navbarOpen">
+                            <i data-feather="menu"></i>
+                        </button>
+                    </div>
+                    <ul class="lg:flex flex-col lg:flex-row lg:items-center lg:mx-auto lg:space-x-8 xl:space-x-14"
+                        :class="{'hidden':!navbarOpen,'flex':navbarOpen}">
+                        <li class="font-semibold text-gray-900 hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
+                            <a href="#">Home</a>
+                        </li>
+                        <li class="font-semibold text-gray-900 hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
+                            <a href="./pages/courses.html">Courses
+                                <ul class="submenu">
+                                    <li><a href="#">course 1</a></li>
+                                    <li><a href="#">course 2</a></li>
+                                    <li><a href="#">course 3</a></li>
+                                    <li><a href="#">course 4</a></li> 
+                                </ul>
+                            </a>
+                        </li>
+                        <li class="font-semibold text-gray-900 hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
+                            <a href="#">About us</a>
+                        </li>
+                        <li class="font-semibold text-gray-900 hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
+    
+                    <div class="lg:flex flex-col md:flex-row md:items-center text-center md:space-x-6"
+                        :class="{'hidden':!navbarOpen,'flex':navbarOpen}">
+                        <a href="#"
+                            class="px-4 py-3 bg-orange-700 text-white font-semibold text-sm rounded-md hover:bg-orange-700 transition ease-in-out duration-500 mb-5 md:mb-0">Join</a>
+    
+                        <a href="#"
+                            class="px-4 py-3 border-2 border-orange-700 text-orange-700 font-semibold text-sm rounded-md hover:bg-orange-700 hover:text-white transition ease-linear duration-500">Become
+                            a member</a>
+                    </div>
+                </nav>
+            </div> <!-- container.// -->
+        </section>
+        <!-- navbar section //end -->
+
+    <div class="mt-8 justify-between text-white hero-course px-12 grid md:grid-cols-2 bg-gray-100">
+        <div class="bg-[#3c3c3b] border p-9">
+            <h1 class="text-2xl font-semibold">Petroleum Reservoir Engineering Training</h1>
+            <br>
+            <h3 class="text-xl font-medium">From $3550 per attendee</h3>
+            <ul class="mt-4">
+                <li class="p-3">Email course</li>
+                <li class="p-3">Course PDF</li>
+                <li class="p-3">Share Course</li>
+            </ul>
+        </div>
+        <div class="bg-white text-gray-800 border p-9">
+            <h1 class="text-xl font-bold">Available Courses</h1>
+        </div>
+    </div>
+
+    <div class="px-9 mt-8">
+        <h1 class="text-2xl font-bold">Course Information</h1>
+        <div class="border-b border-gray-200 dark:border-gray-700 mb-4">
+            <ul class="flex flex-wrap -mb-px" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
+                <li class="mr-2" role="presentation">
+                    <button class="inline-block text-gray-500 hover:text-gray-600 hover:border-gray-300 rounded-t-lg py-4 px-4 text-sm font-medium text-center border-transparent border-b-2 dark:text-gray-400 dark:hover:text-gray-300" id="profile-tab" data-tabs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Course Content</button>
+                </li>
+                <li class="mr-2" role="presentation">
+                    <button class="inline-block text-gray-500 hover:text-gray-600 hover:border-gray-300 rounded-t-lg py-4 px-4 text-sm font-medium text-center border-transparent border-b-2 dark:text-gray-400 dark:hover:text-gray-300 active" id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="true">Course Description</button>
+                </li>
+                <li class="mr-2" role="presentation">
+                    <button class="inline-block text-gray-500 hover:text-gray-600 hover:border-gray-300 rounded-t-lg py-4 px-4 text-sm font-medium text-center border-transparent border-b-2 dark:text-gray-400 dark:hover:text-gray-300" id="settings-tab" data-tabs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Course Objectives</button>
+                </li>
+                <li role="presentation">
+                    <button class="inline-block text-gray-500 hover:text-gray-600 hover:border-gray-300 rounded-t-lg py-4 px-4 text-sm font-medium text-center border-transparent border-b-2 dark:text-gray-400 dark:hover:text-gray-300" id="contacts-tab" data-tabs-target="#contacts" type="button" role="tab" aria-controls="contacts" aria-selected="false">Who Should Attend</button>
+                </li>
+                <li role="presentation">
+                    <button class="inline-block text-gray-500 hover:text-gray-600 hover:border-gray-300 rounded-t-lg py-4 px-4 text-sm font-medium text-center border-transparent border-b-2 dark:text-gray-400 dark:hover:text-gray-300" id="contacts2-tab" data-tabs-target="#contacts2" type="button" role="tab" aria-controls="contacts2" aria-selected="false">CPD Unit</button>
+                </li>
+            </ul>
+        </div>
+    <div id="myTabContent">
+        <div class="bg-gray-50 p-4 rounded-lg dark:bg-gray-800 hidden" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            <p class="text-gray-500 dark:text-gray-400 text-sm">
+                Day 1 <br>Geology and Reservoir Volume
+                <br>
+                Fundamental of Reservoir Description
+                <br>
+                Coring and Core Analysis
+                <br>
+                Coring practices and rock properties
+                <br>
+                Volumetric Behavior
+                <br>
+                Reservoir fluid and rock properties
+                <br>
+                Day 2
+                <br>
+                Fundamentals of fluid flow
+                <br>
+                Reservoir fluid distribution
+                <br>
+                Reservoir classification
+                <br>
+                Reservoir drive mechanisms
+                <br>
+                Material (volumetric) Balance Equations
+                <br>
+                Oil and gas well performance
+                <br>
+                Day 3
+                <br>
+                Fluid Flow in Porous Medium
+                <br>
+                Oil Well productivity
+                <br>
+                Formation Damage
+                <br>
+                Pressure build-up analysis
+                <br>
+                Reservoir fluid displacement concepts
+                <br>
+                Water and Gas Coning
+                <br>
+                Gas and Gas Condensate
+            </p>
+        </div>
+        <div class="bg-gray-50 p-4 rounded-lg dark:bg-gray-800" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+            <p class="text-gray-500 dark:text-gray-400 text-sm">
+                <h1 class="text-xl font-medium">Petroleum Reservoir Engineering Training Course</h1>
+                The aim of this short course is to provide with necessary knowledge in oil and gas reservoir engineering that introduces evaluation techniques to define characters and properties of a petroleum reservoir and helps formulate engineering solution of petroleum field related problems. Numerous engineering practices are covered.
+                This course will help the development of a more complete “understanding” of the characteristics of oil and gas reservoirs. Data collection, integration and application directed toward maximizing recovery are stressed. Reservoir engineering equations are introduced with emphasis directed to parameter significance and an understanding of the results.
+            </p>
+        </div>
+        <div class="bg-gray-50 p-4 rounded-lg dark:bg-gray-800 hidden" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+            <p class="text-gray-500 dark:text-gray-400 text-sm">
+                <ul>
+                    <li>Calculate the flow of oil and gas wells in oil and gas reservoirs.</li>
+                    <li>Determine critical properties of reservoir rocks Fluid (oil, water, and gas) PVT relationships</li>
+                    <li>Calculate hydrocarbons initially in place using several methods</li>
+                    <li>Assess reservoir performance with dynamic techniques</li>
+                    <li>Assess reservoir performance with dynamic techniques</li>
+                    <li>Assess reservoir performance with dynamic techniques</li>
+                    <li>Assess reservoir performance with dynamic techniques</li>
+                    <li>Assess reservoir performance with dynamic techniques</li>
+                    <li>Assess reservoir performance with dynamic techniques</li>
+                    <li>Assess reservoir performance with dynamic techniques</li>
+                    <li>Assess reservoir performance with dynamic techniques</li>
+                    <li>Assess reservoir performance with dynamic techniques</li>
+                </ul>
+            </p>
+        </div>
+        <div class="bg-gray-50 p-4 rounded-lg dark:bg-gray-800 hidden" id="contacts" role="tabpanel" aria-labelledby="contacts-tab">
+            <p class="text-gray-500 dark:text-gray-400 text-sm">
+                Engineers (production engineers, reservoir engineer and field engineer), and well-site geologist, and other staffs from an operating and/or service and/or consultant and engineering company involved in oil and gas production and engineering process.
+Engineers and technical personnel involving with appraisal or field development project, and/or reservoir management team intending to enhance their technical skills and level of confidence in decision making by identifying reservoir problems issues, etc.
+Front line engineers from an operating and/or service and/or consultant and engineering company requires improving their technical skills with high level of confidence to adapt appropriate technology to optimize the production performance and better reservoir management.
+Engineers or geoscientists who will occupy the position of reservoir engineer, any other technically trained individual that desires a more in-depth foundation in reservoir engineering.
+Geologists, geophysicists, engineers, engineering trainees, technical managers, technical assistants, technicians, chemists, physicists, technical supervisors, service company personnel, sales representatives, data processing personnel, and support staff working with reservoir definition, development and production.
+Reservoir engineers, production engineers, chemical engineers, chemists and senior operators who work in oil and gas industry.
+            </p>
+        </div>
+        <div class="bg-gray-50 p-4 rounded-lg dark:bg-gray-800 hidden" id="contacts2" role="tabpanel" aria-labelledby="contacts2-tab">
+            <p class="text-gray-500 dark:text-gray-400 text-sm">
+                Continuing Professional Development
+                21 HOURS CPD
+            </p>
+        </div>
+    </div>
+
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+    <footer class="bg-gray-700 py-16">
+
+        <div class="container max-w-screen-xl mx-auto px-4">
+            <div class="flex flex-col lg:flex-row lg:justify-between">
+
+                <div class="space-y-7 mb-10 lg:mb-0">
+                    <div class="flex justify-center lg:justify-start">
+                        <img src="assets/image/footer-logo.png" alt="Image">
+                    </div>
+
+                    <p class="font-light text-gray-400 text-md md:text-lg text-center lg:text-left">Donate and help
+                        others people <br> around the world</p>
+
+                    <div class="flex items-center justify-center lg:justify-start space-x-5">
+                        <a href="#"
+                            class="px-3 py-3 bg-gray-200 text-gray-700 rounded-full hover:bg-info hover:text-white transition ease-in-out duration-500">
+                            <i data-feather="facebook"></i>
+                        </a>
+
+                        <a href="#"
+                            class="px-3 py-3 bg-gray-200 text-gray-700 rounded-full hover:bg-info hover:text-white transition ease-in-out duration-500">
+                            <i data-feather="twitter"></i>
+                        </a>
+
+                        <a href="#"
+                            class="px-3 py-3 bg-gray-200 text-gray-700 rounded-full hover:bg-info hover:text-white transition ease-in-out duration-500">
+                            <i data-feather="linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="text-center lg:text-left space-y-7 mb-10 lg:mb-0">
+                    <h4 class="font-semibold text-gray-900 text-lg md:text-2xl">Quick links</h4>
+
+                    <a href="#"
+                        class="block font-light text-gray-400 text-sm md:text-lg hover:text-gray-800 transition ease-in-out duration-300">Charity
+                        Ratings</a>
+
+                    <a href="#"
+                        class="block font-light text-gray-400 text-sm md:text-lg hover:text-gray-800 transition ease-in-out duration-300">Top-Rated
+                        Charities</a>
+
+                    <a href="#"
+                        class="block font-light text-gray-400 text-sm md:text-lg hover:text-gray-800 transition ease-in-out duration-300">Top
+                        Compensation</a>
+
+                    <a href="#"
+                        class="block font-light text-gray-400 text-sm md:text-lg hover:text-gray-800 transition ease-in-out duration-300">High
+                        Asset Charities</a>
+                </div>
+
+                <div class="text-center lg:text-left space-y-7 mb-10 lg:mb-0">
+                    <h4 class="font-semibold text-gray-900 text-lg md:text-2xl">Company</h4>
+
+                    <a href="#"
+                        class="block font-light text-gray-400 text-sm md:text-lg hover:text-gray-800 transition ease-in-out duration-300">About
+                        Us</a>
+
+                    <a href="#"
+                        class="block font-light text-gray-400 text-sm md:text-lg hover:text-gray-800 transition ease-in-out duration-300">Journalists
+                        / Media</a>
+
+                    <a href="#"
+                        class="block font-light text-gray-400 text-sm md:text-lg hover:text-gray-800 transition ease-in-out duration-300">Membership</a>
+
+                    <a href="#"
+                        class="block font-light text-gray-400 text-sm md:text-lg hover:text-gray-800 transition ease-in-out duration-300">Blog</a>
+                </div>
+
+                <div class="text-center lg:text-left space-y-7 mb-10 lg:mb-0">
+                    <h4 class="font-semibold text-gray-900 text-lg md:text-2xl">Legal</h4>
+
+                    <a href="#"
+                        class="block font-light text-gray-400 text-sm md:text-lg hover:text-gray-800 transition ease-in-out duration-300">FAQ</a>
+
+                    <a href="#"
+                        class="block font-light text-gray-400 text-sm md:text-lg hover:text-gray-800 transition ease-in-out duration-300">Terms
+                        & Conditions</a>
+                </div>
+
+            </div>
+        </div> <!-- container.// -->
+
+    </footer>
+
+    <script>
+        feather.replace()
+    </script>
+
+</body>
+<!-- from node_modules -->
+<script src="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.bundle.js"></script>
+</html>
