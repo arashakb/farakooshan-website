@@ -31,7 +31,14 @@
                     <div class="mr-3 text-[#005797] ">
                         <i data-feather="log-in"></i>
                     </div>
-                    <h1 class="group-hover:text-[#005797] text-[#3c3c3b]">My Account {{request.user.name}}</h1>
+                    <h1 class="group-hover:text-[#005797] text-[#3c3c3b]">My Account {{request.user.username}}</h1>
+                </a>
+                <a href="{% url 'accounts:logout' %}"
+                    class="group py-1 px-3 flex text-[#3c3c3b] font-semibold text-xs rounded-md hover:text-[#005797] transition ease-in-out duration-500 mb-5 md:mb-0">
+                    <div class="mr-3 text-[#005797] ">
+                        <i data-feather="log-in"></i>
+                    </div>
+                    <h1 class="group-hover:text-[#005797] text-[#3c3c3b]">SignOut</h1>
                 </a>
                 {% else %}
                 <a href="{% url 'accounts:login' %}"
@@ -41,6 +48,7 @@
                     </div>
                     <h1 class="group-hover:text-[#005797] text-[#3c3c3b]">Sign in | Register</h1>
                 </a>
+                
                 {% endif %}
                 <a href="#"
                     class="group px-3 py-1 flex text-[#3c3c3b] font-semibold text-xs rounded-md transition ease-linear duration-200">
