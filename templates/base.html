@@ -24,7 +24,7 @@
     <section>
         <div>
             <div class="p-1 border-b-2 lg:flex flex-col md:flex-row md:items-center text-center md:space-x-6 justify-center md:justify-end" :class="{'hidden':!navbarOpen,'flex':navbarOpen}">
-                <a href="#" class="group py-1 px-3 flex text-[#3c3c3b] font-semibold text-xs rounded-md hover:text-[#005797] transition ease-in-out duration-500 mb-5 md:mb-0">
+                <a href="{% url 'accounts:login' %}" class="group py-1 px-3 flex text-[#3c3c3b] font-semibold text-xs rounded-md hover:text-[#005797] transition ease-in-out duration-500 mb-5 md:mb-0">
                     <div class="mr-3 text-[#005797] ">
                         <i data-feather="log-in"></i>
                     </div>
@@ -177,10 +177,10 @@
                         <a href="#">Articles</a>
                     </li>
                     <li class="font-semibold text-[#3c3c3b] hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
-                        <a href="#">About us</a>
+                        <a href="{% url 'website:about' %}">About us</a>
                     </li>
                     <li class="font-semibold text-[#3c3c3b] hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
-                        <a href="#">Contact</a>
+                        <a href="{% url 'website:contact' %}">Contact</a>
                     </li>
                 </ul>
 

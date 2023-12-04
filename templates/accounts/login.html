@@ -1,40 +1,75 @@
+{% extends 'base.html' %}
 {% load static %}
-<!doctype html>
-<html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+{% block content %}
 
-    <title>Login</title>
+<div class="bg-gray-200 p-3">
+    <div class="p-10 w-3/4 justify-center m-auto bg-white mt-4 mb-5">
 
-    <!-- Bootstrap core CSS -->
-    <link href="{% static 'CSS/bootstrap.css' %}" rel="stylesheet">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-40">
+            <div>
+                <h1 class="mb-8 font-extrabold text-sm">Login</h1>
+                <form method="post" action="{% url 'accounts:login' %}">
+                    {% csrf_token %}
+                    <div>
+                        <label class="block font-semibold" for="name">Username</label>
+                        <input name="username"
+                            class="w-full shadow-inner bg-gray-100 rounded-sm placeholder-black text-xl p-1 border-none block mt-1"
+                            id="name" type="text" name="name" required="required" autofocus="autofocus">
+                    </div>
 
-    <!-- Custom styles for this template -->
-    <link href="{% static 'CSS/signin.css' %}" rel="stylesheet">
-</head>
+                    <div class="mt-4">
+                        <label class="block font-semibold" for="password">Password</label>
+                        <input name="password"
+                            class="w-full shadow-inner bg-gray-100 rounded-sm placeholder-black text-xl p-1 border-none block mt-1"
+                            id="password" type="password" name="password" required="required"
+                            autocomplete="new-password">
+                    </div>
 
-<body class="text-center">
-    <form class="form-signin" method="post" action="{% url 'accounts:login' %}">
-        {% csrf_token %}
-        <img class="mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72"
-            height="72">
-        <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-        <label class="sr-only">Username</label>
-        <input type="test" name="username" class="form-control" placeholder="Username" required autofocus>
-        <label class="sr-only">Password</label>
-        <input type="password" name="password" class="form-control" placeholder="Password" required>
-        <div class="checkbox mb-3">
-            <label>
-                <input type="checkbox" value="remember-me"> Remember me
-            </label>
+                    <div class="items-center justify-between mt-8">
+                        <h1 class="p-4 text-gray-500">Forot your password?</h1>
+                        <button type="submit"
+                            class="w-full flex items-center justify-center p-1 border border-transparent text-base font-medium rounded-md text-white bg-[#005797] hover:bg-[#000831] md:py-1 md:text-sm md:px-1">Log
+                            In</button>
+                    </div>
+                </form>
+            </div>
+
+            <div>
+                <h1 class="mb-8 font-extrabold text-sm">Register</h1>
+                <form method="post" action="">
+                    {% csrf_token %}
+                    <div>
+                        <label class="block font-semibold" for="name">Phone Number</label>
+                        <input
+                            class="w-full shadow-inner bg-gray-100 rounded-sm placeholder-black text-xl p-1 border-none block mt-1"
+                            id="name" type="text" name="name" required="required" autofocus="autofocus">
+                    </div>
+
+                    <div class="mt-4">
+                        <label class="block font-semibold" for="password">Password</label>
+                        <input
+                            class="w-full shadow-inner bg-gray-100 rounded-sm placeholder-black text-xl p-1 border-none block mt-1"
+                            id="password" type="password" name="password" required="required"
+                            autocomplete="new-password">
+                    </div>
+
+                    <div class="mt-4">
+                        <label class="block font-semibold" for="password">Confirm Password</label>
+                        <input
+                            class="w-full shadow-inner bg-gray-100 rounded-sm placeholder-black text-xl p-1 border-none block mt-1"
+                            id="password" type="password" name="password" required="required"
+                            autocomplete="new-password">
+                    </div>
+
+                    <div class="flex items-center justify-between mt-8">
+                        <button type="submit"
+                            class="w-full flex items-center justify-center p-1 border border-transparent text-base font-medium rounded-md text-white bg-[#005797] hover:bg-[#000831] md:p-1 md:text-sm ">Register</button>
+                    </div>
+                </form>
+            </div>
         </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-        <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
-    </form>
-</body>
+    </div>
+</div>
 
-</html>
+{% endblock %}
