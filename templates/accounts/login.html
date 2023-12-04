@@ -11,20 +11,7 @@
                 <h1 class="mb-8 font-extrabold text-sm">Login</h1>
                 <form method="post" action="{% url 'accounts:login' %}">
                     {% csrf_token %}
-                    <div>
-                        <label class="block font-semibold" for="name">Username</label>
-                        <input name="username"
-                            class="w-full shadow-inner bg-gray-100 rounded-sm placeholder-black text-xl p-1 border-none block mt-1"
-                            id="name" type="text" name="name" required="required" autofocus="autofocus">
-                    </div>
-
-                    <div class="mt-4">
-                        <label class="block font-semibold" for="password">Password</label>
-                        <input name="password"
-                            class="w-full shadow-inner bg-gray-100 rounded-sm placeholder-black text-xl p-1 border-none block mt-1"
-                            id="password" type="password" name="password" required="required"
-                            autocomplete="new-password">
-                    </div>
+                    {{form.as_p}}
 
                     <div class="items-center justify-between mt-8">
                         <h1 class="p-4 text-gray-500">Forot your password?</h1>
