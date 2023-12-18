@@ -39,3 +39,6 @@ def signup_view(request):
         return render(request, 'accounts/login.html', context)
     else:
         return redirect('/')
+
+def dashboard_view(request):
+    return render(request, 'dashboard.html')
