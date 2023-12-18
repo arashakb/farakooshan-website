@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'website.apps.WebsiteConfig',
     'blog',
     'accounts',
+    'course',
+    'category',
 ]
 
 MIDDLEWARE = [
