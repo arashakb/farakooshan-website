@@ -41,4 +41,4 @@ def signup_view(request):
         return redirect('/')
 
 def dashboard_view(request):
-    return render(request, 'dashboard.html')
+    return render(request, 'accounts/dashboard.html')
