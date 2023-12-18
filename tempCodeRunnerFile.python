@@ -1,54 +1,34 @@
 import numpy as np
 
-# Function to compute the Householder reflection matrix
-def householder_reflection(v):
-    v = np.array(v, dtype=float)
-    norm_v = np.linalg.norm(v)
-    e1 = np.zeros(len(v))
-    e1[0] = 1
-    u = v - norm_v * e1
-    if np.allclose(u, np.zeros(len(u))):
-        return np.eye(len(v))
-    u /= np.linalg.norm(u)
-    return np.eye(len(v)) - 2 * np.outer(u, u)
+def lu_factorization(matrix):
+    n = len(matrix)
+    lower = np.zeros((n, n))
+    upper = np.zeros((n, n))
 
-# Function to perform QR factorization using Householder reflections
-def qr_factorization(A):
-    m, n = A.shape
-    Q = np.eye(m)
-    R = np.copy(A)
+    for i in range(n):
+        lower[i][i] = 1
 
-    for j in range(min(m-1, n)):
-        # Compute Householder reflection matrix
-        H = householder_reflection(R[j:, j])
-        H_full = np.eye(m)
-        H_full[j:, j:] = H
-        R = np.dot(H_full, R)
-        Q = np.dot(Q, H_full.T)  # Transpose of H_full used for Q
-    
-    # Adjust R to ensure it's upper triangular
-    R = np.triu(R[:n, :])
-    
-    return Q, R
+        for j in range(i, n):
+            sum_val = sum(lower[j][k] * upper[k][i] for k in range(i))
+            upper[i][j] = matrix[i][j] - sum_val
 
-# Example matrix
-example_matrix = np.array([
-    [10,1,1,1],
-    [2,10,1,1],
-    [0,1,10,1],
-    [0,1,1,10]
-])
+        for j in range(i + 1, n):
+            sum_val = sum(lower[j][k] * upper[k][i] for k in range(i))
+            lower[j][i] = (matrix[j][i] - sum_val) / upper[i][i]
 
-# Compute QR factorization
-Q, R = qr_factorization(example_matrix)
+    return lower, upper
 
-# Display Q and R matrices
-print("Q matrix:")
-print(Q)
-print("\nR matrix:")
-print(R)
+# Example 3x3 matrix
+matrix = np.array([[1, 1, 1],
+                   [0, 0.001, 0.001],
+                   [0, 0.001, 1]])
 
-# Check if the QR factorization is correct (A ≈ QR)
-print("\nCheck if A ≈ QR:")
-print(np.allclose(example_matrix, np.dot(Q, R)))
+lower, upper = lu_factorization(matrix)
+
+print("Original Matrix:")
+print(matrix)
+print("\nLower Triangular Matrix (L - with multipliers):")
+print(lower)
+print("\nUpper Triangular Matrix (U):")
+print(upper)
 
