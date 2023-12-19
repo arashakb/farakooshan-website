@@ -1,10 +1,9 @@
-{% load static %}
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'CSS/styles.css' %}">
+    <link rel="stylesheet" href="../CSS/styles.css">
 
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
@@ -13,83 +12,57 @@
         integrity="sha512-7x3zila4t2qNycrtZ31HO0NnJr8kg2VI67YLoRSyi9hGhRN66FHYWr7Axa9Y1J9tGYHVBPqIjSE1ogHrJTz51g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
 
     <title>Document</title>
 </head>
 
-<body class="font-body bg-[#f1f1f1]">
+<body class="font-body">
 
     <!-- navbar section -->
-    <section class="bg-white">
+    <section>
         <div>
-            <div class="p-1 border-b-2 lg:flex flex-col md:flex-row md:items-center text-center md:space-x-6 justify-center md:justify-end"
-                :class="{'hidden':!navbarOpen,'flex':navbarOpen}">
-                {% if request.user.is_authenticated %}
-                <a href=""
-                    class="group py-1 px-3 flex text-[#3c3c3b] font-semibold text-xs rounded-md hover:text-[#005797] transition ease-in-out duration-500 mb-5 md:mb-0">
-                    <div class="mr-3 text-[#005797] ">
-                        <i data-feather="log-in"></i>
-                    </div>
-                    <h1 class="group-hover:text-[#005797] text-[#3c3c3b]">My Account {{request.user.username}}</h1>
-                </a>
-                <a href="{% url 'accounts:logout' %}"
-                    class="group py-1 px-3 flex text-[#3c3c3b] font-semibold text-xs rounded-md hover:text-[#005797] transition ease-in-out duration-500 mb-5 md:mb-0">
-                    <h1 class="group-hover:text-[#005797] text-[#3c3c3b]">Sign Out</h1>
-                </a>
-                {% else %}
-                <a href="{% url 'accounts:login' %}"
-                    class="group py-1 px-3 flex text-[#3c3c3b] font-semibold text-xs rounded-md hover:text-[#005797] transition ease-in-out duration-500 mb-5 md:mb-0">
+            <div class="p-1 border-b-2 lg:flex flex-col md:flex-row md:items-center text-center md:space-x-6 justify-center md:justify-end" :class="{'hidden':!navbarOpen,'flex':navbarOpen}">
+                <a href="#" class="group py-1 px-3 flex text-[#3c3c3b] font-semibold text-xs rounded-md hover:text-[#005797] transition ease-in-out duration-500 mb-5 md:mb-0">
                     <div class="mr-3 text-[#005797] ">
                         <i data-feather="log-in"></i>
                     </div>
                     <h1 class="group-hover:text-[#005797] text-[#3c3c3b]">Sign in | Register</h1>
                 </a>
-                
-                {% endif %}
-                <a href="#"
-                    class="group px-3 py-1 flex text-[#3c3c3b] font-semibold text-xs rounded-md transition ease-linear duration-200">
+                <a href="#" class="group px-3 py-1 flex text-[#3c3c3b] font-semibold text-xs rounded-md transition ease-linear duration-200">
                     <div class="mr-3 text-[#005797] ">
                         <i data-feather="calendar"></i>
                     </div>
                     <h1 class="group-hover:text-[#005797] text-[#3c3c3b]">Bookings</h1>
                 </a>
             </div>
-            <nav class="text-[#3c3c3b] flex-wrap lg:flex items-center px-4 navbar"
-                x-data="{navbarOpen:false,subnavbarOpen:false }">
+            <nav class="text-[#3c3c3b] flex-wrap lg:flex items-center px-4 navbar" x-data="{navbarOpen:false,subnavbarOpen:false }">
                 <div class="flex items-center mb-10 lg:mb-0">
-                    <a href="{% url 'website:index' %}">
-                    <img class="logo" src="{% static 'images/logo.jpg' %}" alt="Logo"></a>
-                    <a href="{% url 'website:index' %}">
-
-                    <h1 class="text-xl text-[#3c3c3b] font-bold">Farakooshan</h1></a>
-                    
+                    <img class="logo" src="../images/logo.jpg" alt="Logo">
+                    <h1 class="text-xl text-[#3c3c3b] font-bold">Farakooshan</h1>
                     <button
                         class="lg:hidden w-10 h-10 ml-auto flex items-center justify-center border border-[#005797] text-[#005797] rounded-md"
                         @click="navbarOpen = !navbarOpen">
                         <i data-feather="menu"></i>
                     </button>
-
+                    
                 </div>
                 <ul class="lg:flex flex-col lg:flex-row lg:items-center lg:space-x-8 xl:space-x-14 justify-end main-menu-ul"
                     :class="{'hidden':!navbarOpen,'flex':navbarOpen}">
-                    <li
-                        class="font-semibold text-[#3c3c3b] hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
-                        <a href="{% url 'website:index' %}">Home</a>
+                    <li class="font-semibold text-[#3c3c3b] hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
+                        <a href="#">Home</a>
                     </li>
-                    <li
-                        class="font-semibold text-[#252525] hover:text-[#252525] transition ease-in-out duration-100 mb-5 lg:mb-0">
-                        <a href="{% url 'category:index' %}" class="flex">
+                    <li class="font-semibold text-[#252525] hover:text-[#252525] transition ease-in-out duration-100 mb-5 lg:mb-0">
+                        <a href="../pages/courses.html" class="flex">
                             <h1>Courses</h1>
                             <div class="ml-2 text-[#005797] items-center mt-1">
                                 <i data-feather="chevron-down"></i>
                             </div>
                         </a>
-
-                        <ul class="submenu grid grid-cols-1 md:grid-cols-3 text-sm">
-                            <li class="col-span-1 w-full p-3">
-                                <div class="w-full border-b-[#005797] border-b-2 pb-2" href="#"><a
-                                        href="">Engineering</a></div>
+                        
+                        <ul class="submenu grid grid-cols-1 md:grid-cols-3 text-sm" >
+                            <li class="col-span-1 w-full p-3"><div class="w-full border-b-[#005797] border-b-2 pb-2" href="#"><a href="">Engineering</a></div>
                                 <div class="subsubmenu relative">
                                     <ul class="text-[#005797]">
                                         <li class="grid grid-cols-2">
@@ -97,7 +70,7 @@
                                                 <i data-feather="chevron-right"></i>
                                             </div>
                                             <a href="#">Articles</a>
-                                        </li>
+                                        </li>   
                                         <li><a href="#">Movies</a></li>
                                         <li><a href="#">Assesments</a></li>
                                     </ul>
@@ -195,46 +168,157 @@
                             </li>
 
                         </ul>
-
+                        
                     </li>
-                    <li
-                        class="font-semibold text-[#3c3c3b] hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
+                    <li class="font-semibold text-[#3c3c3b] hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
                         <a href="#">Consultancy</a>
                     </li>
-                    <li
-                        class="font-semibold text-[#3c3c3b] hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
-                        <a href="{% url 'blog:index' %}">Articles</a>
+                    <li class="font-semibold text-[#3c3c3b] hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
+                        <a href="#">Articles</a>
                     </li>
-                    <li
-                        class="font-semibold text-[#3c3c3b] hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
-                        <a href="{% url 'website:about' %}">About us</a>
+                    <li class="font-semibold text-[#3c3c3b] hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
+                        <a href="#">About us</a>
                     </li>
-                    <li
-                        class="font-semibold text-[#3c3c3b] hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
-                        <a href="{% url 'website:contact' %}">Contact</a>
+                    <li class="font-semibold text-[#3c3c3b] hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
+                        <a href="#">Contact</a>
                     </li>
                 </ul>
 
-
+                
             </nav>
         </div> <!-- container.// -->
     </section>
     <!-- navbar section //end -->
+<div class="bg-gray-200">
+    <div class="flex px-10">   
+        <h1 class="text-3xl font-bold m-2">Articles</h1>
+        <div class="ml-auto mt-3">
+            <form action="#" class="w-full">
+                <input class="blog-search rounded-md" type="text" placeholder=" Search Courses" name="search">
+                <button class="blog-search bg-[#005797] px-3 text-white rounded-md">
+                    <i class="fa fa-search" style="font-size: 27px;"></i>
+                </button>
+            </form>
+        </div>
+    </div> 
+    <div class="grid lg:grid-cols-4 px-10 pb-4 ">
+        <div class="articles lg:col-span-3">
+            <div class="grid lg:grid-cols-2 gap-5">
+                <div class="article bg-white m-auto justify-center rounded-t-md">
+                    <img src="../images/geology.jpg" class="article_image rounded-t-md"/>
+                    <div class="px-3 pb-4">
+                        <div class="flex mt-1">
+                            <div class="text-black mr-1">
+                                <i data-feather="user" class="w-4"></i>
+                            </div>
+                            <h3 class="text-xs font-semibold text-gray-700">Arman Akbari</h3>
+                            <div class="text-black ml-auto">
+                                <i data-feather="calendar" class=" text-gray-400 w-4"></i>
+                            </div> 
+                            <h4 class="text-xs text-gray-400">21 November, 2023</h4>    
+                        </div>
+                        <h1 class="text-xl font-bold mt-2">Article Title</h1>
+                        <p class="mt-2 text-sm"> This is summary of this article in this blog page. blah blah  blah blah blah blah blah blah ...</p>
+                    </div>
+                </div>
 
+                <div class="article bg-white m-auto justify-center rounded-t-md">
+                    <img src="../images/geology.jpg" class="article_image rounded-t-md"/>
+                    <div class="px-3 pb-4">
+                        <div class="flex mt-1">
+                            <div class="text-black mr-1">
+                                <i data-feather="user" class="w-4"></i>
+                            </div>
+                            <h3 class="text-xs font-semibold text-gray-700">Arman Akbari</h3>
+                            <div class="text-black ml-auto">
+                                <i data-feather="calendar" class=" text-gray-400 w-4"></i>
+                            </div> 
+                            <h4 class="text-xs text-gray-400">21 November, 2023</h4>    
+                        </div>
+                        <h1 class="text-xl font-bold mt-2">Article Title</h1>
+                        <p class="mt-2 text-sm"> This is summary of this article in this blog page. blah blah  blah blah blah blah blah blah ...</p>
+                    </div>
+                </div>
 
-    {% block content %}
+                <div class="article bg-white m-auto justify-center rounded-t-md">
+                    <img src="../images/geology.jpg" class="article_image rounded-t-md"/>
+                    <div class="px-3 pb-4">
+                        <div class="flex mt-1">
+                            <div class="text-black mr-1">
+                                <i data-feather="user" class="w-4"></i>
+                            </div>
+                            <h3 class="text-xs font-semibold text-gray-700">Arman Akbari</h3>
+                            <div class="text-black ml-auto">
+                                <i data-feather="calendar" class=" text-gray-400 w-4"></i>
+                            </div> 
+                            <h4 class="text-xs text-gray-400">21 November, 2023</h4>    
+                        </div>
+                        <h1 class="text-xl font-bold mt-2">Article Title</h1>
+                        <p class="mt-2 text-sm"> This is summary of this article in this blog page. blah blah  blah blah blah blah blah blah ...</p>
+                    </div>
+                </div>
 
-    {% endblock %}
+                <div class="article bg-white m-auto justify-center rounded-t-md">
+                    <img src="../images/geology.jpg" class="article_image rounded-t-md"/>
+                    <div class="px-3 pb-4">
+                        <div class="flex mt-1">
+                            <div class="text-black mr-1">
+                                <i data-feather="user" class="w-4"></i>
+                            </div>
+                            <h3 class="text-xs font-semibold text-gray-700">Arman Akbari</h3>
+                            <div class="text-black ml-auto">
+                                <i data-feather="calendar" class=" text-gray-400 w-4"></i>
+                            </div> 
+                            <h4 class="text-xs text-gray-400">21 November, 2023</h4>    
+                        </div>
+                        <h1 class="text-xl font-bold mt-2">Article Title</h1>
+                        <p class="mt-2 text-sm"> This is summary of this article in this blog page. blah blah  blah blah blah blah blah blah ...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar col-span-1 py-6 px-4">
+            <div>
+                <h1 class="bg-[#005797] text-white justify-center p-4 mb-4 rounded-md text-center font-bold ">Popular Posts</h1>
+                <div class="flex bg-white rounded-md mb-2">
+                    <img src="../images/geology.jpg" alt="image" class="rounded-l-md w-2/5 mr-2">
+                    <div class="grid grid-rows-2">
+                        <h3 class="text-sm font-bold">Title of post</h3>
+                        <h4 class="text-gray-400 text-xs">21 November, 2023</h4>
+                    </div>
+                </div>
 
+                <div class="flex bg-white rounded-md mb-2">
+                    <img src="../images/geology.jpg" alt="image" class="rounded-l-md w-2/5 mr-2">
+                    <div class="grid grid-rows-2">
+                        <h3 class="text-sm font-bold">Title of post</h3>
+                        <h4 class="text-gray-400 text-xs">21 November, 2023</h4>
+                    </div>
+                </div>
+                
+                <div class="flex bg-white rounded-md mb-2">
+                    <img src="../images/geology.jpg" alt="image" class="rounded-l-md w-2/5 mr-2">
+                    <div class="grid grid-rows-2">
+                        <h3 class="text-sm font-bold">Title of post</h3>
+                        <h4 class="text-gray-400 text-xs">21 November, 2023</h4>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
 
-    <footer class="bg-[#444444] py-16">
+</div>
+    
+    <footer class="bg-white py-16">
 
         <div class="container max-w-screen-xl mx-auto px-4">
             <div class="flex flex-col lg:flex-row lg:justify-between">
 
                 <div class="space-y-7 mb-10 lg:mb-0">
                     <div class="flex justify-center lg:justify-start">
-                        <img src="{% static 'assets/image/footer-logo.png' %}" alt="Image">
+                        <img src="assets/image/footer-logo.png" alt="Image">
                     </div>
 
                     <p class="font-light text-gray-400 text-md md:text-lg text-center lg:text-left">Donate and help
