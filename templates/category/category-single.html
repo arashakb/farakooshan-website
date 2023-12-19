@@ -1,177 +1,39 @@
-<html lang="en">
+{% extends 'base.html' %}
+{% load static %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/styles.css">
+{% block content %}
+
+<div class="text-white hero-courses px-24 pt-4 bg-[#444444]">
+    <div class="text-center lg:text-left mt-28">
+        <h1 class="font-semibold text-white text-3xl md:text-6xl leading-normal mb-6">Course Directory</h1>
+        <p class="font-light text-md md:text-lg leading-normal mb-12">
+            As Oil and Gas Training Providers, we develop and deliver oil and gas training at our locations in London and Aberdeen, United Kingdom; Dubai, United Arab Emirates, Kuala Lumpur, Malaysia and Houston, Texas, United States. But we can also deliver training courses at our clients location based on request.
+            All our training courses can be delivered at a basic, intermediate or advanced level, depending on the attending delegates or organisational requirements.
+        </p>
+        <button class="mb-12 px-6 py-4 bg-[#005797] font-semibold text-white text-lg rounded-xl hover:bg-[#005797] transition ease-in-out duration-500">
+            View course directory
+        </button>
+    </div>
+</div>
 
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js"
-        integrity="sha512-7x3zila4t2qNycrtZ31HO0NnJr8kg2VI67YLoRSyi9hGhRN66FHYWr7Axa9Y1J9tGYHVBPqIjSE1ogHrJTz51g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<section class="bg-[#f1f1f1]">
+    <div class="grid md:grid-cols-3 px-11 py-10 gap-10 text-[#f1f1f1]">
 
-
-    <title>Document</title>
-</head>
-
-<body class="font-body">
-
-    <!-- home section -->
-    <section class="">
-        <div>
-            <nav class="flex-wrap lg:flex items-center px-4 navbar" x-data="{navbarOpen:false}">
-                <div class="flex items-center mb-10 lg:mb-0">
-                    <img src="./images/logo-icon.png" alt="Logo">
-                    <h1 class="text-xl text-gray-700 font-bold">Mobility Oil & Gas</h1>
-                    <button
-                        class="lg:hidden w-10 h-10 ml-auto flex items-center justify-center border border-blue-500 text-blue-500 rounded-md"
-                        @click="navbarOpen = !navbarOpen">
-                        <i data-feather="menu"></i>
-                    </button>
-                </div>
-                <ul class="lg:flex flex-col lg:flex-row lg:items-center lg:mx-auto lg:space-x-8 xl:space-x-14"
-                    :class="{'hidden':!navbarOpen,'flex':navbarOpen}">
-                    <li class="font-semibold text-gray-900 hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
-                        <a href="#">Home</a>
-                    </li>
-                    <li class="font-semibold text-gray-900 hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
-                        <a href="./pages/courses.html">Courses
-                            <ul class="submenu">
-                                <li><a href="#">course 1</a></li>
-                                <li><a href="#">course 2</a></li>
-                                <li><a href="#">course 3</a></li>
-                                <li><a href="#">course 4</a></li> 
-                            </ul>
-                        </a>
-                    </li>
-                    <li class="font-semibold text-gray-900 hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
-                        <a href="#">About us</a>
-                    </li>
-                    <li class="font-semibold text-gray-900 hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
-
-                <div class="lg:flex flex-col md:flex-row md:items-center text-center md:space-x-6"
-                    :class="{'hidden':!navbarOpen,'flex':navbarOpen}">
-                    <a href="#"
-                        class="px-4 py-3 bg-orange-700 text-white font-semibold text-sm rounded-md hover:bg-orange-700 transition ease-in-out duration-500 mb-5 md:mb-0">Join</a>
-
-                    <a href="#"
-                        class="px-4 py-3 border-2 border-orange-700 text-orange-700 font-semibold text-sm rounded-md hover:bg-orange-700 hover:text-white transition ease-linear duration-500">Become
-                        a member</a>
-                </div>
-            </nav>
-            <div class="flex flex-col md:flex-row justify-between space-x-20 text-white hero-courses px-24 bg-gray-700">
-                <div class="text-center lg:text-left mt-28">
-                    <h1 class="font-semibold text-white text-3xl md:text-6xl leading-normal mb-6">Course Directory</h1>
-
-                    <p class="font-light text-md md:text-lg leading-normal mb-12">As Oil and Gas Training Providers, we develop and deliver oil and gas training at our locations in London and Aberdeen, United Kingdom; Dubai, United Arab Emirates, Kuala Lumpur, Malaysia and Houston, Texas, United States. But we can also deliver training courses at our clients location based on request.
-
-All our training courses can be delivered at a basic, intermediate or advanced level, depending on the attending delegates or organisational requirements.</p>
-
-                    <button
-                        class="mb-12 px-6 py-4 bg-orange-700 font-semibold text-white text-lg rounded-xl hover:bg-orange-700 transition ease-in-out duration-500">View course directory</button>
-                </div>
+        <a href="#" class="col-span-1 bg-white p-10 relative hover:bg-[#005797] hover:text-white">
+            <h3 class="text-xl font-semibold">fsdgfs</h3>
+            <p class="text-xs mt-3">fgsdgs</p>
+            <br />
+            <h4 class="absolute bottom-0 left-0 text-gray-400 ml-5 mb-5 mt-6">21 courses available</h4>
+            <div class="absolute bottom-0 right-0 w-12 py-4 flex justify-center bg-[#005797] text-white">
+                <i data-feather="chevron-right"></i>
             </div>
-        </div> <!-- container.// -->
-    </section>
-    <!-- home section //end -->
+            <div class="overlay absolute top-0 bottom-0 left-0 right-0"></div>
+        </a>
 
 
+    </div>
+</section>
 
-    <footer class="bg-white py-16">
 
-        <div class="container max-w-screen-xl mx-auto px-4">
-            <div class="flex flex-col lg:flex-row lg:justify-between">
-
-                <div class="space-y-7 mb-10 lg:mb-0">
-                    <div class="flex justify-center lg:justify-start">
-                        <img src="assets/image/footer-logo.png" alt="Image">
-                    </div>
-
-                    <p class="font-light text-gray-400 text-md md:text-lg text-center lg:text-left">Donate and help
-                        others people <br> around the world</p>
-
-                    <div class="flex items-center justify-center lg:justify-start space-x-5">
-                        <a href="#"
-                            class="px-3 py-3 bg-gray-200 text-gray-700 rounded-full hover:bg-info hover:text-white transition ease-in-out duration-500">
-                            <i data-feather="facebook"></i>
-                        </a>
-
-                        <a href="#"
-                            class="px-3 py-3 bg-gray-200 text-gray-700 rounded-full hover:bg-info hover:text-white transition ease-in-out duration-500">
-                            <i data-feather="twitter"></i>
-                        </a>
-
-                        <a href="#"
-                            class="px-3 py-3 bg-gray-200 text-gray-700 rounded-full hover:bg-info hover:text-white transition ease-in-out duration-500">
-                            <i data-feather="linkedin"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="text-center lg:text-left space-y-7 mb-10 lg:mb-0">
-                    <h4 class="font-semibold text-gray-900 text-lg md:text-2xl">Quick links</h4>
-
-                    <a href="#"
-                        class="block font-light text-gray-400 text-sm md:text-lg hover:text-gray-800 transition ease-in-out duration-300">Charity
-                        Ratings</a>
-
-                    <a href="#"
-                        class="block font-light text-gray-400 text-sm md:text-lg hover:text-gray-800 transition ease-in-out duration-300">Top-Rated
-                        Charities</a>
-
-                    <a href="#"
-                        class="block font-light text-gray-400 text-sm md:text-lg hover:text-gray-800 transition ease-in-out duration-300">Top
-                        Compensation</a>
-
-                    <a href="#"
-                        class="block font-light text-gray-400 text-sm md:text-lg hover:text-gray-800 transition ease-in-out duration-300">High
-                        Asset Charities</a>
-                </div>
-
-                <div class="text-center lg:text-left space-y-7 mb-10 lg:mb-0">
-                    <h4 class="font-semibold text-gray-900 text-lg md:text-2xl">Company</h4>
-
-                    <a href="#"
-                        class="block font-light text-gray-400 text-sm md:text-lg hover:text-gray-800 transition ease-in-out duration-300">About
-                        Us</a>
-
-                    <a href="#"
-                        class="block font-light text-gray-400 text-sm md:text-lg hover:text-gray-800 transition ease-in-out duration-300">Journalists
-                        / Media</a>
-
-                    <a href="#"
-                        class="block font-light text-gray-400 text-sm md:text-lg hover:text-gray-800 transition ease-in-out duration-300">Membership</a>
-
-                    <a href="#"
-                        class="block font-light text-gray-400 text-sm md:text-lg hover:text-gray-800 transition ease-in-out duration-300">Blog</a>
-                </div>
-
-                <div class="text-center lg:text-left space-y-7 mb-10 lg:mb-0">
-                    <h4 class="font-semibold text-gray-900 text-lg md:text-2xl">Legal</h4>
-
-                    <a href="#"
-                        class="block font-light text-gray-400 text-sm md:text-lg hover:text-gray-800 transition ease-in-out duration-300">FAQ</a>
-
-                    <a href="#"
-                        class="block font-light text-gray-400 text-sm md:text-lg hover:text-gray-800 transition ease-in-out duration-300">Terms
-                        & Conditions</a>
-                </div>
-
-            </div>
-        </div> <!-- container.// -->
-
-    </footer>
-
-    <script>
-        feather.replace()
-    </script>
-
-</body>
-
-</html>
+{% endblock %}

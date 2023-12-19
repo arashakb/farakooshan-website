@@ -4,8 +4,8 @@ from course.views import *
 app_name = 'course'
 
 urlpatterns = [
-    path('', course_view, name="index"),
-    path('single', course_single, name="single"),
-    
+    path('courses', course_view, name="index"),
+    path('<int:pid>', course_single, name="single"),
+    path('', categories_view, name="categories"),
 
 ]

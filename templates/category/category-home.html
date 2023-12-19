@@ -19,12 +19,10 @@
 
 <section class="bg-[#f1f1f1]">
     <div class="grid md:grid-cols-3 px-11 py-10 gap-10 text-[#f1f1f1]">
-
-        <a href="#" class="col-span-1 bg-white p-10 relative hover:bg-[#005797] hover:text-white">
-            <h3 class="text-xl font-semibold">Corrosion Engineering Courses</h3>
-            <p class="text-xs mt-3">Corrosion Engineering is the specialist discipline of applying scientific knowledge,
-                natural laws and physical resources in order to design and implement materials, structures, devices,
-                systems and procedures to manage the natural phenomenon known as corrosion.</p>
+        {% for category in categories %}
+        <a href="{% url 'course:single' category.id %}" class="col-span-1 bg-white p-10 relative hover:bg-[#005797] hover:text-white">
+            <h3 class="text-xl font-semibold">{{category.name}}</h3>
+            <p class="text-xs mt-3">{{category.content}}</p>
             <br />
             <h4 class="absolute bottom-0 left-0 text-gray-400 ml-5 mb-5 mt-6">21 courses available</h4>
             <div class="absolute bottom-0 right-0 w-12 py-4 flex justify-center bg-[#005797] text-white">
@@ -32,68 +30,7 @@
             </div>
             <div class="overlay absolute top-0 bottom-0 left-0 right-0"></div>
         </a>
-        <a href="#" class="bg-white p-10 relative hover:bg-[#005797] hover:text-white">
-            <h3 class="text-xl font-semibold">Corrosion Engineering Courses</h3>
-            <p class="text-xs mt-3">Corrosion Engineering is the specialist discipline of applying scientific knowledge,
-                natural laws and physical resources in order to design and implement materials, structures, devices,
-                systems and procedures to manage the natural phenomenon known as corrosion.</p>
-            <br />
-            <h4 class="absolute bottom-0 left-0 text-gray-400 ml-5 mb-5 mt-6">21 courses available</h4>
-            <div class="absolute bottom-0 right-0 w-12 py-4 flex justify-center bg-[#005797] text-white">
-                <i data-feather="chevron-right"></i>
-            </div>
-            <div class="overlay absolute top-0 bottom-0 left-0 right-0"></div>
-        </a>
-        <a href="#" class="bg-white p-10 relative hover:bg-[#005797] hover:text-white">
-            <h3 class="text-xl font-semibold">Corrosion Engineering Courses</h3>
-            <p class="text-xs mt-3">Corrosion Engineering is the specialist discipline of applying scientific knowledge,
-                natural laws and physical resources in order to design and implement materials, structures, devices,
-                systems and procedures to manage the natural phenomenon known as corrosion.</p>
-            <br />
-            <h4 class="absolute bottom-0 left-0 text-gray-400 ml-5 mb-5 mt-6">21 courses available</h4>
-            <div class="absolute bottom-0 right-0 w-12 py-4 flex justify-center bg-[#005797] text-white">
-                <i data-feather="chevron-right"></i>
-            </div>
-            <div class="overlay absolute top-0 bottom-0 left-0 right-0"></div>
-        </a>
-        <a href="#" class="bg-white p-10 relative hover:bg-[#005797] hover:text-white">
-            <h3 class="text-xl font-semibold">Corrosion Engineering Courses</h3>
-            <p class="text-xs mt-3">Corrosion Engineering is the specialist discipline of applying scientific knowledge,
-                natural laws and physical resources in order to design and implement materials, structures, devices,
-                systems and procedures to manage the natural phenomenon known as corrosion.</p>
-            <br />
-            <h4 class="absolute bottom-0 left-0 text-gray-400 ml-5 mb-5 mt-6">21 courses available</h4>
-            <div class="absolute bottom-0 right-0 w-12 py-4 flex justify-center bg-[#005797] text-white">
-                <i data-feather="chevron-right"></i>
-            </div>
-            <div class="overlay absolute top-0 bottom-0 left-0 right-0"></div>
-        </a>
-        <a href="#" class="bg-white p-10 relative hover:bg-[#005797] hover:text-white">
-            <h3 class="text-xl font-semibold">Corrosion Engineering Courses</h3>
-            <p class="text-xs mt-3">Corrosion Engineering is the specialist discipline of applying scientific knowledge,
-                natural laws and physical resources in order to design and implement materials, structures, devices,
-                systems and procedures to manage the natural phenomenon known as corrosion.</p>
-            <br />
-            <h4 class="absolute bottom-0 left-0 text-gray-400 ml-5 mb-5 mt-6">21 courses available</h4>
-            <div class="absolute bottom-0 right-0 w-12 py-4 flex justify-center bg-[#005797] text-white">
-                <i data-feather="chevron-right"></i>
-            </div>
-            <div class="overlay absolute top-0 bottom-0 left-0 right-0"></div>
-        </a>
-        <a href="#" class="bg-white p-10 relative hover:bg-[#005797] hover:text-white">
-            <h3 class="text-xl font-semibold">Corrosion Engineering Courses</h3>
-            <p class="text-xs mt-3">Corrosion Engineering is the specialist discipline of applying scientific knowledge,
-                natural laws and physical resources in order to design and implement materials, structures, devices,
-                systems and procedures to manage the natural phenomenon known as corrosion.</p>
-            <br />
-            <h4 class="absolute bottom-0 left-0 text-gray-400 ml-5 mb-5 mt-6">21 courses available</h4>
-            <div class="absolute bottom-0 right-0 w-12 py-4 flex justify-center bg-[#005797] text-white">
-                <i data-feather="chevron-right"></i>
-            </div>
-            <div class="overlay absolute top-0 bottom-0 left-0 right-0"></div>
-        </a>
-
-
+        {% endfor %}
 
     </div>
 </section>
