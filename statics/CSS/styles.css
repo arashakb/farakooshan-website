@@ -745,6 +745,10 @@ video {
   height: 60%;
 }
 
+.h-full {
+  height: 100%;
+}
+
 .w-10 {
   width: 2.5rem;
 }
@@ -980,6 +984,11 @@ video {
   background-color: rgb(60 60 59 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#444444\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(68 68 68 / var(--tw-bg-opacity));
+}
+
 .bg-\[\#f1f1f1\] {
   --tw-bg-opacity: 1;
   background-color: rgb(241 241 241 / var(--tw-bg-opacity));
@@ -1160,6 +1169,10 @@ video {
 
 .pt-2 {
   padding-top: 0.5rem;
+}
+
+.pt-7 {
+  padding-top: 1.75rem;
 }
 
 .text-center {
@@ -1384,6 +1397,7 @@ video {
   width: 100%;
   height: 80%;
   color: #fff;
+  padding-top: 5px;
 }
 
 .hero-course{
@@ -1450,8 +1464,9 @@ nav ul li:hover .submenu{
 }
 
 .submenu li a{
-  padding: 15px 15px;
+  padding: 5px 5px;
   width: 100%;
+
 }
 
 .subsubmenu{
@@ -1847,4 +1862,4 @@ ul.submenu li:hover .subsubmenu{
     margin-right: calc(3.5rem * var(--tw-space-x-reverse));
     margin-left: calc(3.5rem * calc(1 - var(--tw-space-x-reverse)));
   }
-} 
+}
