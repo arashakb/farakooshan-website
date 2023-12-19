@@ -741,8 +741,16 @@ video {
   height: 2.5rem;
 }
 
+.h-2\/5 {
+  height: 40%;
+}
+
 .h-3\/5 {
   height: 60%;
+}
+
+.h-4 {
+  height: 1rem;
 }
 
 .h-full {
@@ -888,6 +896,10 @@ video {
 .divide-neutral-200 > :not([hidden]) ~ :not([hidden]) {
   --tw-divide-opacity: 1;
   border-color: rgb(229 229 229 / var(--tw-divide-opacity));
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .rounded-full {
@@ -1397,7 +1409,6 @@ video {
   width: 100%;
   height: 80%;
   color: #fff;
-  padding-top: 5px;
 }
 
 .hero-course{
@@ -1464,9 +1475,8 @@ nav ul li:hover .submenu{
 }
 
 .submenu li a{
-  padding: 5px 5px;
+  padding: 15px 15px;
   width: 100%;
-
 }
 
 .subsubmenu{
