@@ -1171,6 +1171,10 @@ video {
   padding-top: 0.5rem;
 }
 
+.pt-7 {
+  padding-top: 1.75rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -1393,6 +1397,7 @@ video {
   width: 100%;
   height: 80%;
   color: #fff;
+  padding-top: 5px;
 }
 
 .hero-course{
@@ -1459,8 +1464,9 @@ nav ul li:hover .submenu{
 }
 
 .submenu li a{
-  padding: 15px 15px;
+  padding: 5px 5px;
   width: 100%;
+
 }
 
 .subsubmenu{
