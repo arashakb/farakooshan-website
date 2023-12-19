@@ -5,7 +5,7 @@ app_name = 'course'
 
 urlpatterns = [
     path('courses', course_view, name="index"),
-    path('<int:pid>', course_single, name="single"),
+    path('<int:pid>', category_single, name="single"),
     path('', categories_view, name="categories"),
 
 ]
