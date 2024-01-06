@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from course.models import Category
+from course.models import Category, Course
 # Create your views here.
 
 def categories_view(request):
@@ -13,4 +13,6 @@ def category_single(request, pid):
     return render(request, 'category/category-single.html', context)
 
 def course_view(request, category_id, course_id):
-    return render(request, 'course/course.html')
+    course = get_object_or_404(Course,pk=course_id)
+    context = {'course': course}
+    return render(request, 'course/course.html', context)

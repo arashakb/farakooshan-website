@@ -5,9 +5,9 @@
 
 <div class="mt-8 justify-between text-white hero-course px-12 grid md:grid-cols-2 bg-gray-100">
     <div class="bg-[#3c3c3b] border p-9">
-        <h1 class="text-2xl font-semibold">Petroleum Reservoir Engineering Training</h1>
+        <h1 class="text-2xl font-semibold">{{course.title}}</h1>
         <br>
-        <h3 class="text-xl font-medium">From $3550 per attendee</h3>
+        <h3 class="text-xl font-medium">From {{course.price}} per attendee</h3>
         <ul class="mt-4">
             <li class="p-3">Email course</li>
             <li class="p-3">Course PDF</li>
@@ -59,113 +59,31 @@
         <div class="bg-gray-50 p-4 rounded-lg hidden course-tabs" id="profile" role="tabpanel"
             aria-labelledby="profile-tab">
             <p class="text-sm">
-                Day 1 <br>Geology and Reservoir Volume
-                <br>
-                Fundamental of Reservoir Description
-                <br>
-                Coring and Core Analysis
-                <br>
-                Coring practices and rock properties
-                <br>
-                Volumetric Behavior
-                <br>
-                Reservoir fluid and rock properties
-                <br>
-                Day 2
-                <br>
-                Fundamentals of fluid flow
-                <br>
-                Reservoir fluid distribution
-                <br>
-                Reservoir classification
-                <br>
-                Reservoir drive mechanisms
-                <br>
-                Material (volumetric) Balance Equations
-                <br>
-                Oil and gas well performance
-                <br>
-                Day 3
-                <br>
-                Fluid Flow in Porous Medium
-                <br>
-                Oil Well productivity
-                <br>
-                Formation Damage
-                <br>
-                Pressure build-up analysis
-                <br>
-                Reservoir fluid displacement concepts
-                <br>
-                Water and Gas Coning
-                <br>
-                Gas and Gas Condensate
+                {{course.content|linebreaks}}
             </p>
         </div>
         <div class="bg-gray-50 p-4 rounded-lg" id="dashboard" role="tabpanel"
             aria-labelledby="dashboard-tab">
             <p class="text-gray-500 text-sm">
-            <h1 class="text-xl font-medium">
-                Petroleum Reservoir Engineering Training Course
-            </h1>
-            The aim of this short course is to provide with necessary knowledge in oil and gas reservoir engineering
-            that introduces evaluation techniques to define characters and properties of a petroleum reservoir and helps
-            formulate engineering solution of petroleum field related problems. Numerous engineering practices are
-            covered.
-
-
-            This course will help the development of a more complete “understanding” of the characteristics of oil and
-            gas reservoirs. Data collection, integration and application directed toward maximizing recovery are
-            stressed. Reservoir engineering equations are introduced with emphasis directed to parameter significance
-            and an understanding of the results.
+            {{course.description|linebreaks}}
             </p>
         </div>
         <div class="bg-gray-50 p-4 rounded-lg hidden" id="settings" role="tabpanel"
             aria-labelledby="settings-tab">
             <p class="text-sm">
-            <ul>
-                <li>Calculate the flow of oil and gas wells in oil and gas reservoirs.</li>
-                <li>Determine critical properties of reservoir rocks Fluid (oil, water, and gas) PVT relationships</li>
-                <li>Calculate hydrocarbons initially in place using several methods</li>
-                <li>Assess reservoir performance with dynamic techniques</li>
-                <li>Assess reservoir performance with dynamic techniques</li>
-                <li>Assess reservoir performance with dynamic techniques</li>
-                <li>Assess reservoir performance with dynamic techniques</li>
-                <li>Assess reservoir performance with dynamic techniques</li>
-                <li>Assess reservoir performance with dynamic techniques</li>
-                <li>Assess reservoir performance with dynamic techniques</li>
-                <li>Assess reservoir performance with dynamic techniques</li>
-                <li>Assess reservoir performance with dynamic techniques</li>
-            </ul>
+            {{course.objectives|linebreaks}}
             </p>
         </div>
         <div class="bg-gray-50 p-4 rounded-lg hidden" id="contacts" role="tabpanel"
             aria-labelledby="contacts-tab">
             <p class="text-sm">
-                Engineers (production engineers, reservoir engineer and field engineer), and well-site geologist, and
-                other staffs from an operating and/or service and/or consultant and engineering company involved in oil
-                and gas production and engineering process.
-                Engineers and technical personnel involving with appraisal or field development project, and/or
-                reservoir management team intending to enhance their technical skills and level of confidence in
-                decision making by identifying reservoir problems issues, etc.
-                Front line engineers from an operating and/or service and/or consultant and engineering company requires
-                improving their technical skills with high level of confidence to adapt appropriate technology to
-                optimize the production performance and better reservoir management.
-                Engineers or geoscientists who will occupy the position of reservoir engineer, any other technically
-                trained individual that desires a more in-depth foundation in reservoir engineering.
-                Geologists, geophysicists, engineers, engineering trainees, technical managers, technical assistants,
-                technicians, chemists, physicists, technical supervisors, service company personnel, sales
-                representatives, data processing personnel, and support staff working with reservoir definition,
-                development and production.
-                Reservoir engineers, production engineers, chemical engineers, chemists and senior operators who work in
-                oil and gas industry.
+                {{course.whoshouldattend|linebreaks}}
             </p>
         </div>
         <div class="bg-gray-50 p-4 rounded-lg hidden" id="contacts2" role="tabpanel"
             aria-labelledby="contacts2-tab">
             <p class="text-sm">
-                Continuing Professional Development
-                21 HOURS CPD
+                {{course.cpdunit|linebreaks}}
             </p>
         </div>
     </div>
