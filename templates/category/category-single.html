@@ -20,9 +20,9 @@
 <section class="bg-[#f1f1f1]">
     <div class="grid md:grid-cols-3 px-11 py-10 gap-10 text-[#f1f1f1]">
         {% for course in courses %}
-        <a href="#" class="col-span-1 bg-white p-10 relative hover:bg-[#005797] hover:text-white">
+        <a href="{% url 'course:course-single' category_id=category_pid course_id=course.id %}" class="col-span-1 bg-white p-10 relative hover:bg-[#005797] hover:text-white">
             <h3 class="text-xl font-semibold">{{course.title}}</h3>
-            <p class="text-xs mt-3">{{course.}}</p>
+            <p class="text-xs mt-3">{{category_pid}}</p>
             <br />
             <h4 class="absolute bottom-0 left-0 text-gray-400 ml-5 mb-5 mt-6">21 courses available</h4>
             <div class="absolute bottom-0 right-0 w-12 py-4 flex justify-center bg-[#005797] text-white">
