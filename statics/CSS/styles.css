@@ -1874,3 +1874,7 @@ ul.submenu li:hover .subsubmenu{
     margin-left: calc(3.5rem * calc(1 - var(--tw-space-x-reverse)));
   }
 }
+
+.course-tabs{
+  background: white;
+}
