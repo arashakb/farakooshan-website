@@ -30,7 +30,7 @@
                             <div class="text-black ml-auto">
                                 <i data-feather="calendar" class=" text-gray-400 w-4"></i>
                             </div> 
-                            <h4 class="text-xs text-gray-400">{{post.published_date}}</h4>    
+                            <h4 class="text-xs text-gray-400">{{post.published_date|date:"D d M Y"}}</h4>    
                         </div>
                         <a href="{% url 'blog:single' post.id %}"><h1 class="text-xl font-bold mt-2">{{post.title}}</h1></a>
                         <p class="mt-2 text-sm">{{post.content}}</p>
