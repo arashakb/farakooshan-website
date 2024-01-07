@@ -3,7 +3,6 @@
 
 {% block content %}
 
-
 <div class="bg-[#f1f1f1]">
     <div class="flex px-10">   
         <div class="ml-auto mt-3">
@@ -19,25 +18,16 @@
         <div class="articles lg:col-span-3">
             <div class="bg-white p-10 rounded-md">
                 <h1 class="text-4xl font-bold text-[#444444] mb-4">
-                    The title of this article
+                    {{post.title}}
                 </h1>
                 <div class="flex text-sm">
-                    <div>Author: Arman Akbari</div>
+                    <div>Author: {{post.author.get_full_name}}</div>
                     <div class="ml-auto">Created in 19/9/2023</div>
                 </div>
                 
-                <img class="w-full overflow-hidden h-2/5 mb-4" src="../images/geology.jpg" alt="">
+                <img class="w-full overflow-hidden h-2/5 mb-4" src="{% static 'images/geology.jpg' %}" alt="">
                 <p>
-                    This is where the content suppose to be held This is where the content suppose to be held This is where the content suppose to be held This is where the content suppose to be held This is where the content suppose to be held
-                    This is where the content suppose to be held This is where the content suppose to be heldThis is where the content suppose to be heldThis is where the content suppose to be heldThis is where the content suppose to be held
-                    This is where the content suppose to be heldThis is where the content suppose to be held
-                    This is where the content suppose to be held
-                    This is where the content suppose to be held
-                    This is where the content suppose to be held
-                    This is where the content suppose to be heldThis is where the content suppose to be heldThis is where the content suppose to be heldThis is where the content suppose to be held
-                    This is where the content suppose to be held
-                    This is where the content suppose to be heldThis is where the content suppose to be heldThis is where the content suppose to be held
-                    This is where the content suppose to be heldThis is where the content suppose to be heldThis is where the content suppose to be heldThis is where the content suppose to be held
+                    {{post.content}}
                 </p>
             </div>
         </div>
@@ -45,7 +35,7 @@
             <div>
                 <h1 class="bg-[#005797] text-white justify-center p-4 mb-4 rounded-md text-center font-bold ">Popular Posts</h1>
                 <div class="flex bg-white rounded-md mb-2">
-                    <img src="../images/geology.jpg" alt="image" class="rounded-l-md w-2/5 mr-2">
+                    <img src="{% static 'images/geology.jpg' %}" alt="image" class="rounded-l-md w-2/5 mr-2">
                     <div class="grid grid-rows-2">
                         <h3 class="text-sm font-bold">Title of post</h3>
                         <h4 class="text-gray-400 text-xs">21 November, 2023</h4>
@@ -53,7 +43,7 @@
                 </div>
 
                 <div class="flex bg-white rounded-md mb-2">
-                    <img src="../images/geology.jpg" alt="image" class="rounded-l-md w-2/5 mr-2">
+                    <img src="{% static 'images/geology.jpg' %}" alt="image" class="rounded-l-md w-2/5 mr-2">
                     <div class="grid grid-rows-2">
                         <h3 class="text-sm font-bold">Title of post</h3>
                         <h4 class="text-gray-400 text-xs">21 November, 2023</h4>
@@ -61,7 +51,7 @@
                 </div>
                 
                 <div class="flex bg-white rounded-md mb-2">
-                    <img src="../images/geology.jpg" alt="image" class="rounded-l-md w-2/5 mr-2">
+                    <img src="{% static 'images/geology.jpg' %}" alt="image" class="rounded-l-md w-2/5 mr-2">
                     <div class="grid grid-rows-2">
                         <h3 class="text-sm font-bold">Title of post</h3>
                         <h4 class="text-gray-400 text-xs">21 November, 2023</h4>
@@ -74,4 +64,5 @@
     </div>
 
 </div>
+    
 {% endblock %}
