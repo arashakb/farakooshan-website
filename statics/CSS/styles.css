@@ -1878,3 +1878,10 @@ ul.submenu li:hover .subsubmenu{
 .course-tabs{
   background: white;
 }
+
+.dropdown:hover > .dropdown-content {
+	display: block;
+}
+.dropdown-content-second{
+  margin-left: 92%;
+}

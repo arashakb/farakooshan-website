@@ -11,6 +11,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://unpkg.com/tailwindcss@1.2.0/dist/tailwind.min.css" rel="stylesheet">
     <title>Document</title>
 </head>
 
@@ -73,16 +74,113 @@
                         class="font-semibold text-[#3c3c3b] hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
                         <a href="{% url 'website:index' %}">Home</a>
                     </li>
-                    <li
-                        class="font-semibold text-[#252525] hover:text-[#252525] transition ease-in-out duration-100 mb-5 lg:mb-0">
-                        <a href="{% url 'course:categories' %}" class="flex">
+                    <li class="font-semibold text-[#252525] hover:text-[#252525] transition ease-in-out duration-100 mb-5 lg:mb-0">
+                        <div class="dropdown inline-block relative">
+                            <a class="py-2 px-2 rounded inline-flex items-center" href={% url 'course:categories' %}>
+                                <span>Courses</span>
+                            </a>
+                            <ul class="dropdown-content absolute hidden pt-1">
+                                <li class="dropdown">
+                                    <a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Engineering</a>
+                                    <ul class="dropdown-content dropdown-content-second absolute hidden text-gray-700 pl-5 -mt-10 ">
+                                        <li><a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Course Topics</a>
+                                        <li><a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Resources</a>
+                                        <li><a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Movies</a>
+                                        <li><a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Movies</a>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Operation & Maintenance</a>
+                                    <ul class="dropdown-content dropdown-content-second absolute hidden text-gray-700 pl-5 -mt-10 ">
+                                        <li><a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Course Topics</a>
+                                        <li><a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Resources</a>
+                                        <li><a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Movies</a>
+                                        <li><a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Movies</a>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">HSE</a>
+                                    <ul class="dropdown-content dropdown-content-second absolute hidden text-gray-700 pl-5 -mt-10 ">
+                                        <li><a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Course Topics</a>
+                                        <li><a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Resources</a>
+                                        <li><a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Movies</a>
+                                        <li><a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Movies</a>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Control and Instrument</a>
+                                    <ul class="dropdown-content dropdown-content-second absolute hidden text-gray-700 pl-5 -mt-10 ">
+                                        <li><a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Course Topics</a>
+                                        <li><a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Resources</a>
+                                        <li><a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Movies</a>
+                                        <li><a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Movies</a>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Inspection</a>
+                                    <ul class="dropdown-content dropdown-content-second absolute hidden text-gray-700 pl-5 -mt-10 ">
+                                        <li><a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Course Topics</a>
+                                        <li><a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Resources</a>
+                                        <li><a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Movies</a>
+                                        <li><a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Movies</a>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Standards</a>
+                                    <ul class="dropdown-content dropdown-content-second absolute hidden text-gray-700 pl-5 -mt-10 ">
+                                        <li><a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Course Topics</a>
+                                        <li><a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Resources</a>
+                                        <li><a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Movies</a>
+                                        <li><a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Movies</a>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Energy Saving</a>
+                                    <ul class="dropdown-content dropdown-content-second absolute hidden text-gray-700 pl-5 -mt-10 ">
+                                        <li><a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Course Topics</a>
+                                        <li><a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Resources</a>
+                                        <li><a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Movies</a>
+                                        <li><a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Movies</a>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">AI and Machine Learning</a>
+                                    <ul class="dropdown-content dropdown-content-second absolute hidden text-gray-700 pl-5 -mt-10 ">
+                                        <li><a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Course Topics</a>
+                                        <li><a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Resources</a>
+                                        <li><a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Movies</a>
+                                        <li><a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Movies</a>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Physical Asset Management</a>
+                                    <ul class="dropdown-content dropdown-content-second absolute hidden text-gray-700 pl-5 -mt-10 ">
+                                        <li><a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Course Topics</a>
+                                        <li><a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Resources</a>
+                                        <li><a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Movies</a>
+                                        <li><a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Movies</a>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Traning Need Analysis (TNA)</a>
+                                    <ul class="dropdown-content dropdown-content-second absolute hidden text-gray-700 pl-5 -mt-10 ">
+                                        <li><a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Course Topics</a>
+                                        <li><a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Resources</a>
+                                        <li><a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Movies</a>
+                                        <li><a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Movies</a>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <!-- <a href="{% url 'course:categories' %}" class="flex">
                             <h1>Courses</h1>
                             <div class="ml-2 text-[#005797] items-center mt-1">
                                 <i data-feather="chevron-down"></i>
                             </div>
-                        </a>
+                        </a> -->
 
-                        <ul class="submenu grid grid-cols-1 md:grid-cols-3 text-sm">
+                       <!-- <ul class="submenu grid grid-cols-1 md:grid-cols-3 text-sm">
                             <li class="col-span-1 w-full p-3">
                                 <div class="w-full border-b-[#005797] border-b-2 pb-2">
                                     <a href="">Engineering</a>
@@ -409,7 +507,7 @@
                                 </div>
                             </li>
 
-                        </ul>
+                        </ul>  -->
 
                     </li>
                     <li
