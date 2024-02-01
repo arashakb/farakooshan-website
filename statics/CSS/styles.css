@@ -1885,3 +1885,15 @@ ul.submenu li:hover .subsubmenu{
 .dropdown-content-second{
   margin-left: 92%;
 }
+.course-category-cards{
+  position: relative;
+  border-color: #444444;
+}
+.course-category-cards-learnmore{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.our-client{
+  padding: 20px;
+}
