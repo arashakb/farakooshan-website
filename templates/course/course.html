@@ -84,6 +84,9 @@
             aria-labelledby="contacts2-tab">
             <p class="text-sm">
                 {{course.cpdunit|linebreaks}}
+                <video controls>
+                    <source src="{{course.video.url}}" type="video/mp4">
+                </video> 
             </p>
         </div>
     </div>
