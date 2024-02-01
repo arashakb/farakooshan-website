@@ -62,33 +62,33 @@
                 {{course.content|linebreaks}}
             </p>
         </div>
-        <div class="bg-gray-50 p-4 rounded-lg" id="dashboard" role="tabpanel"
-            aria-labelledby="dashboard-tab">
+        <div class="bg-gray-50 p-4 rounded-lg" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
             <p class="text-gray-500 text-sm">
-            {{course.description|linebreaks}}
+                {{course.description|linebreaks}}
             </p>
         </div>
-        <div class="bg-gray-50 p-4 rounded-lg hidden" id="settings" role="tabpanel"
-            aria-labelledby="settings-tab">
+        <div class="bg-gray-50 p-4 rounded-lg hidden" id="settings" role="tabpanel" aria-labelledby="settings-tab">
             <p class="text-sm">
-            {{course.objectives|linebreaks}}
+                {{course.objectives|linebreaks}}
             </p>
         </div>
-        <div class="bg-gray-50 p-4 rounded-lg hidden" id="contacts" role="tabpanel"
-            aria-labelledby="contacts-tab">
+        <div class="bg-gray-50 p-4 rounded-lg hidden" id="contacts" role="tabpanel" aria-labelledby="contacts-tab">
             <p class="text-sm">
                 {{course.whoshouldattend|linebreaks}}
             </p>
         </div>
-        <div class="bg-gray-50 p-4 rounded-lg hidden" id="contacts2" role="tabpanel"
-            aria-labelledby="contacts2-tab">
+        <div class="bg-gray-50 p-4 rounded-lg hidden" id="contacts2" role="tabpanel" aria-labelledby="contacts2-tab">
             <p class="text-sm">
                 {{course.cpdunit|linebreaks}}
-                <video controls>
+                {{course.video}}
+                {% if course.video.url != None %}
+                <video width="320" height="240" controls>
                     <source src="{{course.video.url}}" type="video/mp4">
-                </video> 
+                </video>
+                {% endif %}
             </p>
         </div>
+
     </div>
 
 </div>

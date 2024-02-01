@@ -13,7 +13,7 @@ class Course(models.Model):
     image = models.ImageField(upload_to='course/', default='course/default.jpg')
     title = models.CharField(max_length=255)
     price = models.IntegerField(default=0)
-    video = models.FileField(upload_to='course/',null=True,validators=[FileExtensionValidator(allowed_extensions=['MOV','avi','mp4','webm','mkv'])])
+    video = models.FileField(upload_to='course/',null=True, blank=True,validators=[FileExtensionValidator(allowed_extensions=['MOV','avi','mp4','webm','mkv'])])
     # tag 
     category = models.ManyToManyField(Category)
     # post
