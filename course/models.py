@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.validators import FileExtensionValidator 
 # Create your models here.
 class Category(models.Model):
     name = models.CharField(max_length=255)
@@ -9,9 +10,10 @@ class Category(models.Model):
         return self.name
     
 class Course(models.Model):
-    # image
+    image = models.ImageField(upload_to='course/', default='course/default.jpg')
     title = models.CharField(max_length=255)
     price = models.IntegerField(default=0)
+    video = models.FileField(upload_to='course/',null=True,validators=[FileExtensionValidator(allowed_extensions=['MOV','avi','mp4','webm','mkv'])])
     # tag 
     category = models.ManyToManyField(Category)
     # post
