@@ -7,9 +7,9 @@ from farakooshan_website.settings import *
 SECRET_KEY = 'django-insecure-nffof$ji3a6zor_*0_&q%c*swjwh-1*6pvi^4dd=s&3c#2pfp#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['farakooshan.com','www.farakooshan.com']
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases

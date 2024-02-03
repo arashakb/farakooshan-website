@@ -1,7 +1,10 @@
 Django>3.2,<3.3
-asgiref
-pytz
-sqlparse
-typing-extensions==4.8.0
-flowbite
 pillow
+django-multi-captcha-admin
+django-simple-captcha
+django-summernote
+django-taggit
+django-utils-six
+Faker
+django-compressor
+django-deug-toolbar
