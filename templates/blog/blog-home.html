@@ -20,10 +20,10 @@
             <div class="grid gap-5">
                 {% for post in posts %}
                 <div class="article bg-white m-auto justify-center rounded-md flex">
-                    <div class="px-3 pb-4 article-contents">
+                    <div class="px-3 pb-4 article-contents w-full">
                         <a href="{% url 'blog:single' post.id %}"><h1 class="text-xl font-bold mt-2">{{post.title}}</h1></a>
                         <p class="mt-2 text-sm text-[#f1f1f1] invisible md:visible">{{post.content}}</p>
-                        <div class="flex article-date-auther">
+                        <div class="flex article-date-auther w-full">
                             <div class="flex article-author">
                                 <div class="text-black mr-1"><i data-feather="user" class="w-4"></i></div>
                                 <h3 class="text-xs font-semibold">{{post.author.get_full_name}}</h3>
@@ -32,6 +32,7 @@
                                 <div class="text-black ml-auto"><i data-feather="calendar" class="w-4"></i></div> 
                                 <h3 class="text-xs text-[#f1f1f1]">{{post.published_date|date:"D d M Y"}}</h3>  
                             </div>
+                            <button class="p-1 border border-[#005797] rounded-md ml-auto hover:bg-[#005797] hover:text-white article-readmore">Read more</button>
                         </div>
                     </div>
                     <img src="{{post.image.url}}" class="article_image rounded-md"/>

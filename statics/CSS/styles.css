@@ -1922,6 +1922,7 @@ button:focus{
 .article-date-auther{
   position: absolute;
   bottom: 0;
+  width: 100%;
 }
 .article-author h3 {
   padding: 4px;
@@ -1932,4 +1933,10 @@ button:focus{
 }
 .hide{
   visibility: hidden;
+}
+.article-readmore{
+  position: absolute;
+  right: 6%;
+  bottom:5%;
+  color: #005797
 }
