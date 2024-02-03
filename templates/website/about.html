@@ -2,57 +2,35 @@
 {% load static %}
 
 {% block content %}
-<style>
-    input[type=text], select, textarea {
-        width: 50%;
-        padding: 12px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-        margin-top: 6px;
-        margin-bottom: 16px;
-        resize: vertical;
-    }
-    input[type=submit] {
-        background-color: #04AA6D;
-        color: white;
-        padding: 12px 20px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-    }
 
-    input[type=submit]:hover {
-        background-color: #45a049;
-    }
-
-    .form-container {
-        width: 50%;
-        border-radius: 5px;
-        background-color: #f2f2f2;
-        padding: 20px;
-    }
-</style>
-<div class="form-container">
-    <form action="#">
-      <label for="fname">First Name</label>
+<section class="grid grid-cols-2 p-10 gap-5">
+  <div class="form-container col-span-1 bg-white w-full about-us-form">
+    <h1 class="text-[#444444] font-bold text-3xl">Make an Enquiry</h1>
+    <form action="#" class="bg-white w-full m-auto p-10 about-us-form">
+      <label for="fname">First Name</label><br>
       <input type="text" id="fname" name="firstname" placeholder="Your name..">
-  
-      <label for="lname">Last Name</label>
+      <br>
+      <label for="lname">Last Name</label><br>
       <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-  
-      <label for="country">Country</label>
-      <select id="country" name="country">
+      <br>
+      <label for="country" class="mb-5">Country</label><br>
+      <select id="country" name="country" class="mb-6 p-2 mt-5">
         <option value="australia">Australia</option>
         <option value="canada">Canada</option>
         <option value="usa">USA</option>
       </select>
-  
+      <br>
       <label for="subject">Subject</label>
-      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-  
-      <input type="submit" value="Submit">
+      <br>
+      <textarea class="mt-5" id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      <br>
+      <br>
+      <input type="submit" value="Submit Enquiry">
     </form>
   </div>
+  <div class="col-span-1 ml-auto">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25895.925627362623!2d51.449510738872476!3d35.77560471179176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e0469fe133fb5%3A0xd63ca3192d82b662!2sPasdaran%2C%20District%204%2C%20Tehran%2C%20Tehran%20Province%2C%20Iran!5e0!3m2!1sen!2s!4v1706980035925!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
 
-{% endblock %}
+</section>
+  {% endblock %}
