@@ -9,80 +9,114 @@
         <br>
         <h3 class="text-xl font-medium">From {{course.price}} per attendee</h3>
         <ul class="mt-4">
-            <li class="p-3">Email course</li>
-            <li class="p-3">Course PDF</li>
-            <li class="p-3">Share Course</li>
+            <li class="p-3 flex">
+                <div class="mr-3 text-white">
+                    <i data-feather="mail"></i>
+                </div>
+                Email course
+            </li>
+            <li class="p-3 flex">
+                <div class="mr-3 text-white">
+                    <i data-feather="download"></i>
+                </div>
+                Course PDF
+            </li>
+            <li class="p-3 flex">
+                <div class="mr-3 text-white">
+                    <i data-feather="facebook"></i>
+                </div>
+                Share Course
+            </li>
         </ul>
+        <div class="md:flex">
+            <button class="mb-12 mr-6 md:mt-6 border border-white px-6 py-4 bg-[#3c3c3b] hover:bg-[#005797] hover:text-white font-semibold text-white text-lg hover:bg-[#005797] transition ease-in-out duration-500">
+                View course directory
+            </button>
+            <button class="mb-12 md:mt-6 border border-white px-6 py-4 bg-[#3c3c3b] hover:bg-[#005797] hover:text-white font-semibold text-white text-lg hover:bg-[#005797] transition ease-in-out duration-500">
+                View course directory
+            </button>
+        </div>
     </div>
-    <div class="bg-white text-gray-800 border p-9">
+    <div class="bg-white text-[#3c3c3b] border p-9">
         <h1 class="text-xl font-bold">Available Courses</h1>
     </div>
 </div>
 
 <div class="px-9 mt-8">
     <h1 class="text-2xl font-bold">Course Information</h1>
-    <div class="border-b border-gray-200 dark:border-gray-700 mb-4">
+    <div class="">
         <ul class="flex flex-wrap -mb-px" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
             <li class="mr-2" role="presentation">
                 <button
-                    class="inline-block text-gray-500 hover:text-gray-600 hover:border-gray-300 rounded-t-lg py-4 px-4 text-sm font-medium text-center border-transparent border-b-2 dark:text-gray-400 dark:hover:text-gray-300"
+                    class="inline-block text-gray-500 hover:text-gray-600 hover:bg-gray-50 rounded-t-lg py-4 px-4 text-sm font-medium text-center dark:text-gray-400 dark:hover:text-gray-300 active"
                     id="profile-tab" data-tabs-target="#profile" type="button" role="tab" aria-controls="profile"
-                    aria-selected="false">Course Content</button>
+                    aria-selected="true">Course Content</button>
             </li>
             <li class="mr-2" role="presentation">
                 <button
-                    class="inline-block text-gray-500 hover:text-gray-600 hover:border-gray-300 rounded-t-lg py-4 px-4 text-sm font-medium text-center border-transparent border-b-2 dark:text-gray-400 dark:hover:text-gray-300 active"
+                    class="inline-block text-gray-500 hover:text-gray-600 hover:bg-gray-50 rounded-t-lg py-4 px-4 text-sm font-medium text-center dark:text-gray-400 dark:hover:text-gray-300 "
                     id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab" aria-controls="dashboard"
-                    aria-selected="true">Course Description</button>
+                    aria-selected="false">Course Description</button>
             </li>
             <li class="mr-2" role="presentation">
                 <button
-                    class="inline-block text-gray-500 hover:text-gray-600 hover:border-gray-300 rounded-t-lg py-4 px-4 text-sm font-medium text-center border-transparent border-b-2 dark:text-gray-400 dark:hover:text-gray-300"
+                    class="inline-block text-gray-500 hover:text-gray-600 hover:bg-gray-50 rounded-t-lg py-4 px-4 text-sm font-medium text-center dark:text-gray-400 dark:hover:text-gray-300"
                     id="settings-tab" data-tabs-target="#settings" type="button" role="tab" aria-controls="settings"
                     aria-selected="false">Course Objectives</button>
             </li>
-            <li role="presentation">
+            <li class="mr-2" role="presentation">
                 <button
-                    class="inline-block text-gray-500 hover:text-gray-600 hover:border-gray-300 rounded-t-lg py-4 px-4 text-sm font-medium text-center border-transparent border-b-2 dark:text-gray-400 dark:hover:text-gray-300"
+                    class="inline-block text-gray-500 hover:text-gray-600 hover:bg-gray-50 rounded-t-lg py-4 px-4 text-sm font-medium text-center dark:text-gray-400 dark:hover:text-gray-300"
                     id="contacts-tab" data-tabs-target="#contacts" type="button" role="tab" aria-controls="contacts"
                     aria-selected="false">Who Should Attend</button>
             </li>
-            <li role="presentation">
+            <li class="mr-2" role="presentation">
                 <button
-                    class="inline-block text-gray-500 hover:text-gray-600 hover:border-gray-300 rounded-t-lg py-4 px-4 text-sm font-medium text-center border-transparent border-b-2 dark:text-gray-400 dark:hover:text-gray-300"
+                    class="inline-block text-gray-500 hover:text-gray-600 hover:bg-gray-50 rounded-t-lg py-4 px-4 text-sm font-medium text-center dark:text-gray-400 dark:hover:text-gray-300"
                     id="contacts2-tab" data-tabs-target="#contacts2" type="button" role="tab" aria-controls="contacts2"
                     aria-selected="false">CPD Unit</button>
             </li>
+            <li role="presentation">
+                <button
+                    class="inline-block text-gray-500 hover:text-gray-600 hover:bg-gray-50 rounded-t-lg py-4 px-4 text-sm font-medium text-center dark:text-gray-400 dark:hover:text-gray-300"
+                    id="movies-tab" data-tabs-target="#movies" type="button" role="tab" aria-controls="movies"
+                    aria-selected="false">Movies</button>
+            </li>
         </ul>
     </div>
-    <div id="myTabContent bg-gray-50">
-        <div class="bg-gray-50 p-4 rounded-lg hidden course-tabs" id="profile" role="tabpanel"
+    <div id="myTabContent bg-gray-50 text-[#3c3c3b]">
+        <div class="bg-gray-50 text-[#3c3c3b] p-4 course-tabs" id="profile" role="tabpanel"
             aria-labelledby="profile-tab">
-            <p class="text-sm">
+            <p class="text-sm text-[#3c3c3b]">
                 {{course.content|linebreaks}}
             </p>
         </div>
-        <div class="bg-gray-50 p-4 rounded-lg" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
-            <p class="text-gray-500 text-sm">
+        <div class="bg-gray-50 text-[#3c3c3b] p-4 rounded-lg hidden " id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+            <p class="text-sm text-[#3c3c3b]">
                 {{course.description|linebreaks}}
             </p>
         </div>
-        <div class="bg-gray-50 p-4 rounded-lg hidden" id="settings" role="tabpanel" aria-labelledby="settings-tab">
-            <p class="text-sm">
+        <div class="bg-gray-50 text-[#3c3c3b] p-4 rounded-lg hidden" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+            <p class="text-sm text-[#3c3c3b]">
                 {{course.objectives|linebreaks}}
             </p>
         </div>
-        <div class="bg-gray-50 p-4 rounded-lg hidden" id="contacts" role="tabpanel" aria-labelledby="contacts-tab">
-            <p class="text-sm">
+        <div class="bg-gray-50 text-[#3c3c3b] p-4 rounded-lg hidden" id="contacts" role="tabpanel" aria-labelledby="contacts-tab">
+            <p class="text-sm text-[#3c3c3b]">
                 {{course.whoshouldattend|linebreaks}}
             </p>
         </div>
-        <div class="bg-gray-50 p-4 rounded-lg hidden" id="contacts2" role="tabpanel" aria-labelledby="contacts2-tab">
-            <p class="text-sm">
+        <div class="bg-gray-50 text-[#3c3c3b] p-4 rounded-lg hidden" id="contacts2" role="tabpanel" aria-labelledby="contacts2-tab">
+            <p class="text-sm text-[#3c3c3b]">
                 {{course.cpdunit|linebreaks}}
-                {{course.video}}
+            </p>
+        </div>
+        <div class="bg-gray-50text-[#3c3c3b] p-4 rounded-lg hidden" id="movies" role="tabpanel" aria-labelledby="movies-tab">
+            <p class="text-sm text-[#3c3c3b]">
+                
+                
                 {% if course.video.url != None %}
-                <video width="320" height="240" controls>
+                <video width="320" height="240" controls class="course-video">
                     <source src="{{course.video.url}}" type="video/mp4">
                 </video>
                 {% endif %}

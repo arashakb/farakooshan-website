@@ -52,8 +52,7 @@
                     <h1 class="group-hover:text-[#005797] text-[#3c3c3b]">Bookings</h1>
                 </a>
             </div>
-            <nav class="text-[#3c3c3b] flex-wrap lg:flex items-center px-4 navbar"
-                x-data="{navbarOpen:false,subnavbarOpen:false }">
+            <nav class="text-[#3c3c3b] flex-wrap lg:flex items-center px-4 navbar" x-data="{navbarOpen:false,subnavbarOpen:false }">
                 <div class="flex items-center mb-10 lg:mb-0">
                     <a href="{% url 'website:index' %}">
                     <img class="logo" src="{% static 'images/logo.jpg' %}" alt="Logo"></a>
@@ -85,7 +84,7 @@
                                     <a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="{% url 'course:single' category.id %}">{{category.name}}</a>
                                     <ul class="dropdown-content dropdown-content-second absolute hidden text-gray-700 pl-5 -mt-10 ">
 
-                                        <li><a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Course Topics</a>
+                                        <li><a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="{% url 'course:single' category.id %}">Courses</a>
                                         <li><a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">References & Training material</a>
                                         <li><a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Assesments</a>
                                         <li><a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Enrolment</a>
