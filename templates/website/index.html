@@ -77,12 +77,13 @@
             Categories
         </h1>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 relative">
-            <a href="#" class="group text-center border border-[#444444] bg-white rounded-md hover:text-white hover:bg-[#005797] transition duration-500 course-category-cards">
+        {% for category in categories %}
+            <a href="{% url 'course:single' category.id %}" class="group text-center border border-[#444444] bg-white rounded-md hover:text-white hover:bg-[#005797] transition duration-500 course-category-cards">
                 <div class="group-hover:text-white text-black items-center p-5 ">
-                    <h4 class="font-semibold text-base md:text-1xl">Engineering</h4>
+                    <h4 class="font-semibold text-base md:text-1xl">{{category.name}}</h4>
                 </div>
                 <p class="group-hover:text-gray-200 font-light text-gray-500 text-md md:text-xl mb-12">
-                    21 Courses
+                    {{category.course_set.count}} Courses
                 </p>
 
                 <div class="group-hover:text-gray-200 transition duration-100 flex justify-center bottom-0 course-category-cards-learnmore">
@@ -92,124 +93,7 @@
                     </div>
                 </div> 
             </a>
-            <a href="#" class="group text-center border bg-white rounded-md hover:text-white hover:bg-[#005797] transition duration-500 course-category-cards">
-                <div class="group-hover:text-white text-black items-center p-5">
-                    <h4 class="font-semibold text-base md:text-1xl ">Operation & Management</h4>
-                </div>
-                <p class="group-hover:text-gray-200 font-light text-gray-500 text-md md:text-xl mb-12">21 Courses</p>
-
-                <div class="group-hover:text-gray-200 transition duration-100 flex justify-center bottom-0 course-category-cards-learnmore">
-                    <div class="flex items-center gap-5 p-2 font-semibold text-info text-lg rounded-xl transition ease-linear duration-500">
-                        Learn more
-                        <i data-feather="chevron-right"></i>
-                    </div>
-                </div> 
-            </a>
-            <a href="#" class="group text-center border bg-white rounded-md hover:text-white hover:bg-[#005797] transition duration-500 course-category-cards">
-                <div class="group-hover:text-white text-black items-center p-5">
-                    <h4 class="font-semibold text-base md:text-1xl ">HSE</h4>
-                </div>
-                <p class="group-hover:text-gray-200 font-light text-gray-500 text-md md:text-xl mb-12">21 Courses</p>
-
-                <div class="group-hover:text-gray-200 transition duration-100 flex justify-center bottom-0 course-category-cards-learnmore">
-                    <div class="flex items-center gap-5 p-2 font-semibold text-info text-lg rounded-xl transition ease-linear duration-500">
-                        Learn more
-                        <i data-feather="chevron-right"></i>
-                </div>
-                </div>
-            </a>
-            <a href="#" class="group text-center border bg-white rounded-md hover:text-white hover:bg-[#005797] transition duration-500 course-category-cards">
-                <div class="group-hover:text-white text-black items-center p-5">
-                    <h4 class="font-semibold text-base md:text-1xl ">Control & Instrument</h4>
-                </div>
-                <p class="group-hover:text-gray-200 font-light text-gray-500 text-md md:text-xl mb-12">21 Courses</p>
-
-                <div class="group-hover:text-gray-200 transition duration-100 flex justify-center bottom-0 course-category-cards-learnmore">
-                    <div class="flex items-center gap-5 p-2 font-semibold text-info text-lg rounded-xl transition ease-linear duration-500">
-                        Learn more
-                        <i data-feather="chevron-right"></i>
-                </div>
-                </div>
-            </a>
-            <a href="#" class="group text-center border bg-white rounded-md hover:text-white hover:bg-[#005797] transition duration-500 course-category-cards">
-                <div class="group-hover:text-white text-black items-center p-5">
-                    <h4 class="font-semibold text-base md:text-1xl">Inspection</h4>
-                </div>
-                <p class="group-hover:text-gray-200 font-light text-gray-500 text-md md:text-xl mb-12">21 Courses</p>
-
-                <div class="group-hover:text-gray-200 transition duration-100 flex justify-center bottom-0 course-category-cards-learnmore">
-                    <div class="flex items-center gap-5 p-2 font-semibold text-info text-lg rounded-xl transition ease-linear duration-500">
-                        Learn more
-                        <i data-feather="chevron-right"></i>
-                </div>
-                </div>
-            </a>
-
-            <a href="#" class="group text-center border bg-white rounded-md hover:text-white hover:bg-[#005797] transition duration-500 course-category-cards">
-                <div class="group-hover:text-white text-black items-center p-5">
-                    <h4 class="font-semibold text-base md:text-1xl ">Standards</h4>
-                </div>
-                <p class="group-hover:text-gray-200 font-light text-gray-500 text-md md:text-xl mb-12">21 Courses</p>
-
-                <div class="group-hover:text-gray-200 transition duration-100 flex justify-center bottom-0 course-category-cards-learnmore">
-                    <div class="flex items-center gap-5 p-2 font-semibold text-info text-lg rounded-xl transition ease-linear duration-500">
-                        Learn more
-                        <i data-feather="chevron-right"></i>
-                </div>
-                </div>
-            </a>
-            <a href="#" class="group text-center border bg-white rounded-md hover:text-white hover:bg-[#005797] transition duration-500 course-category-cards">
-                <div class="group-hover:text-white text-black items-center p-5">
-                    <h4 class="font-semibold text-base md:text-1xl">Energy Saving</h4>
-                </div>
-                <p class="group-hover:text-gray-200 font-light text-gray-500 text-md md:text-xl mb-12">21 Courses</p>
-
-                <div class="group-hover:text-gray-200 transition duration-100 flex justify-center bottom-0 course-category-cards-learnmore">
-                    <div class="flex items-center gap-5 p-2 font-semibold text-info text-lg rounded-xl transition ease-linear duration-500">
-                        Learn more
-                        <i data-feather="chevron-right"></i>
-                </div>
-                </div>
-            </a>
-            <a href="#" class="group text-center border bg-white rounded-md hover:text-white hover:bg-[#005797] transition duration-500 course-category-cards">
-                <div class="group-hover:text-white text-black items-center p-5">
-                    <h4 class="font-semibold text-base md:text-1xl">AI & Machine learning</h4>
-                </div>
-                <p class="group-hover:text-gray-200 font-light text-gray-500 text-md md:text-xl mb-12">21 Courses</p>
-
-                <div class="group-hover:text-gray-200 transition duration-100 flex justify-center bottom-0 course-category-cards-learnmore">
-                    <div class="flex items-center gap-5 p-2 font-semibold text-info text-lg rounded-xl transition ease-linear duration-500">
-                        Learn more
-                        <i data-feather="chevron-right"></i>
-                </div>
-                </div>
-            </a>
-            <a href="#" class="group text-center border bg-white rounded-md hover:text-white hover:bg-[#005797] transition duration-500 course-category-cards">
-                <div class="group-hover:text-white text-black items-center p-5">
-                    <h4 class="font-semibold text-base md:text-1xl">Physical Asset Mnagement</h4>
-                </div>
-                <p class="group-hover:text-gray-200 font-light text-gray-500 text-md md:text-xl mb-12">21 Courses</p>
-
-                <div class="group-hover:text-gray-200 transition duration-200 flex justify-center bottom-0 course-category-cards-learnmore">
-                    <div class="flex items-center gap-5 p-2 font-semibold text-info text-lg rounded-xl transition ease-linear duration-500">
-                        Learn more
-                        <i data-feather="chevron-right"></i>
-                </div>
-                </div>
-            </a>
-            <a href="#" class="group text-center border bg-white rounded-md hover:text-white hover:bg-[#005797] transition duration-500 course-category-cards">
-                <div class="group-hover:text-white text-black items-center p-5">
-                    <h4 class="font-semibold text-base md:text-1xl">Training Need Analysis (TNA)</h4>
-                </div>
-                <p class="group-hover:text-gray-200 font-light text-gray-500 text-md md:text-xl mb-12">21 Courses</p>
-
-                <div class="group-hover:text-gray-200 transition duration-200 flex justify-center bottom-0 course-category-cards-learnmore">
-                    <div class="flex items-center gap-5 p-2 font-semibold text-info text-lg rounded-xl transition ease-linear duration-500">
-                        Learn more
-                        <i data-feather="chevron-right"></i>
-                </div>
-                </div>
-            </a>
+        {% endfor %}
         </div>
 
     </div> <!-- container.// -->

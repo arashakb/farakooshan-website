@@ -41,4 +41,7 @@ def signup_view(request):
         return redirect('/')
 
 def dashboard_view(request):
-    return render(request, 'accounts/dashboard.html')
+    if request.user.is_authenticated:
+        return render(request, 'accounts/dashboard.html')
+    else:
+        return redirect('/')
