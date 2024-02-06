@@ -1,10 +1,18 @@
 {% load static %}
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'CSS/styles.css' %}">
+    
+    {% if LANGUAGE_CODE == 'fa' %}
+    <link rel="stylesheet" href="{% static 'CSS/rtl.css' %}">
+    {% endif %}
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js"
         integrity="sha512-7x3zila4t2qNycrtZ31HO0NnJr8kg2VI67YLoRSyi9hGhRN66FHYWr7Axa9Y1J9tGYHVBPqIjSE1ogHrJTz51g=="
@@ -12,7 +20,7 @@
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://unpkg.com/tailwindcss@1.2.0/dist/tailwind.min.css" rel="stylesheet">
-    <title>Document</title>
+    <title>{% translate 'Farakooshan' %}</title>
 </head>
 
 <body class="font-body bg-[#f1f1f1]">
@@ -28,11 +36,11 @@
                     <div class="mr-3 text-[#005797] ">
                         <i data-feather="log-in"></i>
                     </div>
-                    <h1 class="group-hover:text-[#005797] text-[#3c3c3b]">My Account {{request.user.username}}</h1>
+                    <h1 class="group-hover:text-[#005797] text-[#3c3c3b]">{% blocktranslate with name=request.user.username %}My Account {{name}} {% endblocktranslate %} </h1>
                 </a>
                 <a href="{% url 'accounts:logout' %}"
                     class="group py-1 px-3 flex text-[#3c3c3b] font-semibold text-xs rounded-md hover:text-[#005797] transition ease-in-out duration-500 mb-5 md:mb-0">
-                    <h1 class="group-hover:text-[#005797] text-[#3c3c3b]">Sign Out</h1>
+                    <h1 class="group-hover:text-[#005797] text-[#3c3c3b]">{% translate 'Sign Out' %}</h1>
                 </a>
                 {% else %}
                 <a href="{% url 'accounts:login' %}"
@@ -40,7 +48,7 @@
                     <div class="mr-3 text-[#005797] ">
                         <i data-feather="log-in"></i>
                     </div>
-                    <h1 class="group-hover:text-[#005797] text-[#3c3c3b]">Sign in | Register</h1>
+                    <h1 class="group-hover:text-[#005797] text-[#3c3c3b]">{% translate 'Sign in | Register' %}</h1>
                 </a>
                 
                 {% endif %}
@@ -49,7 +57,7 @@
                     <div class="mr-3 text-[#005797] ">
                         <i data-feather="calendar"></i>
                     </div>
-                    <h1 class="group-hover:text-[#005797] text-[#3c3c3b]">Bookings</h1>
+                    <h1 class="group-hover:text-[#005797] text-[#3c3c3b]">{% translate 'Bookings' %}</h1>
                 </a>
             </div>
             <nav class="text-[#3c3c3b] flex-wrap lg:flex items-center px-4 navbar" x-data="{navbarOpen:false,subnavbarOpen:false }">
@@ -58,7 +66,7 @@
                     <img class="logo" src="{% static 'images/logo.jpg' %}" alt="Logo"></a>
                     <a href="{% url 'website:index' %}">
 
-                    <h1 class="text-xl text-[#3c3c3b] font-bold">arakooshan</h1></a>
+                    <h1 class="text-xl text-[#3c3c3b] font-bold">{% translate 'arakooshan' %}</h1></a>
                     
                     <button
                         class="lg:hidden w-10 h-10 ml-auto flex items-center justify-center border border-[#005797] text-[#005797] rounded-md"
@@ -71,12 +79,12 @@
                     :class="{'hidden':!navbarOpen,'flex':navbarOpen}">
                     <li
                         class="font-semibold text-[#3c3c3b] hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
-                        <a href="{% url 'website:index' %}">Home</a>
+                        <a href="{% url 'website:index' %}">{% translate 'Home' %}</a>
                     </li>
                     <li class="font-semibold text-[#252525] hover:text-[#252525] transition ease-in-out duration-100 mb-5 lg:mb-0">
                         <div class="dropdown inline-block relative">
                             <a class="py-2 px-2 rounded inline-flex items-center" href={% url 'course:categories' %}>
-                                <span>Courses</span>
+                                <span>{% translate 'Courses' %}</span>
                             </a>
                             <ul class="dropdown-content absolute hidden pt-1">
                                 {% for category in categories %}
@@ -95,358 +103,23 @@
                             </ul>
                         </div>
                         
-                        <!-- <a href="{% url 'course:categories' %}" class="flex">
-                            <h1>Courses</h1>
-                            <div class="ml-2 text-[#005797] items-center mt-1">
-                                <i data-feather="chevron-down"></i>
-                            </div>
-                        </a> -->
-
-                       <!-- <ul class="submenu grid grid-cols-1 md:grid-cols-3 text-sm">
-                            <li class="col-span-1 w-full p-3">
-                                <div class="w-full border-b-[#005797] border-b-2 pb-2">
-                                    <a href="">Engineering</a>
-                                </div>
-                                <div class="subsubmenu relative">
-                                    <ul class="text-[#3c3c3b]">
-                                        <li><a class="flex h-4" href="#">
-                                                <div class="text-[#005797] flex">
-                                                    <i data-feather="chevron-right"></i>
-                                                </div>
-                                                <div>Articles</div>
-                                        </a></li>   
-                                        <li><a class="flex" href="#">
-                                                <div class="text-[#005797] flex">
-                                                    <i data-feather="chevron-right"></i>
-                                                </div>
-                                                <div>Movies</div>
-                                            </a></li> 
-                                        <li><a class="flex" href="#">
-                                                <div class="text-[#005797] flex">
-                                                    <i data-feather="chevron-right"></i>
-                                                </div>
-                                                <div>Assesments</div>
-                                        </a></li> 
-                                        
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="col-span-1 w-full p-3">
-                                <div class="w-full border-b-[#005797] border-b-2 pb-2">
-                                    <a href="#">Operation & Maintenance</a>
-                                </div>
-                                <div class="subsubmenu relative">
-                                    <ul class="text-[#3c3c3b]">
-                                        <li>
-                                            <a class="flex h-4" href="#">
-                                                <div class="text-[#005797] flex">
-                                                    <i data-feather="chevron-right"></i>
-                                                </div>
-                                                <div>Articles</div>
-                                            </a>                                           
-                                        </li>   
-                                        <li>
-                                            <a class="flex" href="#">
-                                                <div class="text-[#005797] flex">
-                                                    <i data-feather="chevron-right"></i>
-                                                </div>
-                                                <div>Movies</div>
-                                            </a>                                           
-                                        </li> 
-                                        <li>
-                                            <a class="flex" href="#">
-                                                <div class="text-[#005797] flex">
-                                                    <i data-feather="chevron-right"></i>
-                                                </div>
-                                                <div>Assesments</div>
-                                            </a>                                           
-                                        </li> 
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="col-span-1 w-full p-3">
-                                <div class="w-full border-b-[#005797] border-b-2 pb-2">
-                                    <a href="#">HSE</a>    
-                                </div>
-                                <div class="subsubmenu relative">
-                                    <ul class="text-[#3c3c3b]">
-                                        <li>
-                                            <a class="flex h-4" href="#">
-                                                <div class="text-[#005797] flex">
-                                                    <i data-feather="chevron-right"></i>
-                                                </div>
-                                                <div>Articles</div>
-                                            </a>                                           
-                                        </li>   
-                                        <li>
-                                            <a class="flex" href="#">
-                                                <div class="text-[#005797] flex">
-                                                    <i data-feather="chevron-right"></i>
-                                                </div>
-                                                <div>Movies</div>
-                                            </a>                                           
-                                        </li> 
-                                        <li>
-                                            <a class="flex" href="#">
-                                                <div class="text-[#005797] flex">
-                                                    <i data-feather="chevron-right"></i>
-                                                </div>
-                                                <div>Assesments</div>
-                                            </a>                                           
-                                        </li> 
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="col-span-1 w-full p-3">
-                                <div class="w-full border-b-[#005797] border-b-2 pb-2">
-                                    <a href="#">Control and Instrument</a>    
-                                </div>
-                                <div class="subsubmenu relative">
-                                    <ul class="text-[#005797]">
-                                        <li>
-                                            <a class="flex h-4" href="#">
-                                                <div class="text-[#005797] flex">
-                                                    <i data-feather="chevron-right"></i>
-                                                </div>
-                                                <div>Articles</div>
-                                            </a>                                           
-                                        </li>   
-                                        <li>
-                                            <a class="flex" href="#">
-                                                <div class="text-[#005797] flex">
-                                                    <i data-feather="chevron-right"></i>
-                                                </div>
-                                                <div>Movies</div>
-                                            </a>                                           
-                                        </li> 
-                                        <li>
-                                            <a class="flex" href="#">
-                                                <div class="text-[#005797] flex">
-                                                    <i data-feather="chevron-right"></i>
-                                                </div>
-                                                <div>Assesments</div>
-                                            </a>                                           
-                                        </li> 
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="col-span-1 w-full p-3">
-                                <div class="w-full border-b-[#005797] border-b-2 pb-2">
-                                    <a href="#">Inspection</a>    
-                                </div>
-                                <div class="subsubmenu relative">
-                                    <ul class="text-[#005797]">
-                                        <li>
-                                            <a class="flex h-4" href="#">
-                                                <div class="text-[#005797] flex">
-                                                    <i data-feather="chevron-right"></i>
-                                                </div>
-                                                <div>Articles</div>
-                                            </a>                                           
-                                        </li>   
-                                        <li>
-                                            <a class="flex" href="#">
-                                                <div class="text-[#005797] flex">
-                                                    <i data-feather="chevron-right"></i>
-                                                </div>
-                                                <div>Movies</div>
-                                            </a>                                           
-                                        </li> 
-                                        <li>
-                                            <a class="flex" href="#">
-                                                <div class="text-[#005797] flex">
-                                                    <i data-feather="chevron-right"></i>
-                                                </div>
-                                                <div>Assesments</div>
-                                            </a>                                           
-                                        </li> 
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="col-span-1 w-full p-3">
-                                <div class="w-full border-b-[#005797] border-b-2 pb-2">
-                                    <a href="#">Standards</a>    
-                                </div>
-                                <div class="subsubmenu relative">
-                                    <ul class="text-[#005797]">
-                                        <li>
-                                            <a class="flex h-4" href="#">
-                                                <div class="text-[#005797] flex">
-                                                    <i data-feather="chevron-right"></i>
-                                                </div>
-                                                <div>Articles</div>
-                                            </a>                                           
-                                        </li>   
-                                        <li>
-                                            <a class="flex" href="#">
-                                                <div class="text-[#005797] flex">
-                                                    <i data-feather="chevron-right"></i>
-                                                </div>
-                                                <div>Movies</div>
-                                            </a>                                           
-                                        </li> 
-                                        <li>
-                                            <a class="flex" href="#">
-                                                <div class="text-[#005797] flex">
-                                                    <i data-feather="chevron-right"></i>
-                                                </div>
-                                                <div>Assesments</div>
-                                            </a>                                           
-                                        </li> 
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="col-span-1 w-full p-3">
-                                <div class="w-full border-b-[#005797] border-b-2 pb-2">
-                                    <a href="#">Energy Saving</a>    
-                                </div>
-                                <div class="subsubmenu relative">
-                                    <ul class="text-[#005797]">
-                                        <li>
-                                            <a class="flex h-4" href="#">
-                                                <div class="text-[#005797] flex">
-                                                    <i data-feather="chevron-right"></i>
-                                                </div>
-                                                <div>Articles</div>
-                                            </a>                                           
-                                        </li>   
-                                        <li>
-                                            <a class="flex" href="#">
-                                                <div class="text-[#005797] flex">
-                                                    <i data-feather="chevron-right"></i>
-                                                </div>
-                                                <div>Movies</div>
-                                            </a>                                           
-                                        </li> 
-                                        <li>
-                                            <a class="flex" href="#">
-                                                <div class="text-[#005797] flex">
-                                                    <i data-feather="chevron-right"></i>
-                                                </div>
-                                                <div>Assesments</div>
-                                            </a>                                           
-                                        </li> 
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="col-span-1 w-full p-3">
-                                <div class="w-full border-b-[#005797] border-b-2 pb-2">
-                                    <a href="#">AI and Machine learning</a>    
-                                </div>
-                                <div class="subsubmenu relative">
-                                    <ul class="text-[#005797]">
-                                        <li>
-                                            <a class="flex h-4" href="#">
-                                                <div class="text-[#005797] flex">
-                                                    <i data-feather="chevron-right"></i>
-                                                </div>
-                                                <div>Articles</div>
-                                            </a>                                           
-                                        </li>   
-                                        <li>
-                                            <a class="flex" href="#">
-                                                <div class="text-[#005797] flex">
-                                                    <i data-feather="chevron-right"></i>
-                                                </div>
-                                                <div>Movies</div>
-                                            </a>                                           
-                                        </li> 
-                                        <li>
-                                            <a class="flex" href="#">
-                                                <div class="text-[#005797] flex">
-                                                    <i data-feather="chevron-right"></i>
-                                                </div>
-                                                <div>Assesments</div>
-                                            </a>                                           
-                                        </li> 
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="col-span-1 w-full p-3">
-                                <div class="w-full border-b-[#005797] border-b-2 pb-2">
-                                    <a href="#">Physical Asset Management</a>    
-                                </div>
-                                <div class="subsubmenu relative">
-                                    <ul class="text-[#005797]">
-                                        <li>
-                                            <a class="flex h-4" href="#">
-                                                <div class="text-[#005797] flex">
-                                                    <i data-feather="chevron-right"></i>
-                                                </div>
-                                                <div>Articles</div>
-                                            </a>                                           
-                                        </li>   
-                                        <li>
-                                            <a class="flex" href="#">
-                                                <div class="text-[#005797] flex">
-                                                    <i data-feather="chevron-right"></i>
-                                                </div>
-                                                <div>Movies</div>
-                                            </a>                                           
-                                        </li> 
-                                        <li>
-                                            <a class="flex" href="#">
-                                                <div class="text-[#005797] flex">
-                                                    <i data-feather="chevron-right"></i>
-                                                </div>
-                                                <div>Assesments</div>
-                                            </a>                                           
-                                        </li> 
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="col-span-1 w-full p-3">
-                                <div class="w-full border-b-[#005797] border-b-2 pb-2">
-                                    <a href="#">Training Need Analysis (TNA)</a>    
-                                </div>
-                                <div class="subsubmenu relative">
-                                    <ul class="text-[#005797]">
-                                        <li>
-                                            <a class="flex h-4" href="#">
-                                                <div class="text-[#005797] flex">
-                                                    <i data-feather="chevron-right"></i>
-                                                </div>
-                                                <div class="text-[#f1f1f1]">Articles</div>
-                                            </a>                                           
-                                        </li>   
-                                        <li>
-                                            <a class="flex" href="#">
-                                                <div class="text-[#005797] flex">
-                                                    <i data-feather="chevron-right"></i>
-                                                </div>
-                                                <div>Movies</div>
-                                            </a>                                           
-                                        </li> 
-                                        <li>
-                                            <a class="flex" href="#">
-                                                <div class="text-[#005797] flex">
-                                                    <i data-feather="chevron-right"></i>
-                                                </div>
-                                                <div>Assesments</div>
-                                            </a>                                           
-                                        </li> 
-                                    </ul>
-                                </div>
-                            </li>
-
-                        </ul>  -->
 
                     </li>
                     <li
                         class="font-semibold text-[#3c3c3b] hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
-                        <a href="#">Consultancy</a>
+                        <a href="#">{% translate 'Consultancy' %}</a>
                     </li>
                     <li
                         class="font-semibold text-[#3c3c3b] hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
-                        <a href="{% url 'blog:index' %}">Articles</a>
+                        <a href="{% url 'blog:index' %}">{% translate 'Articles' %}</a>
                     </li>
                     <li
                         class="font-semibold text-[#3c3c3b] hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
-                        <a href="{% url 'website:about' %}">About us</a>
+                        <a href="{% url 'website:about' %}">{% translate 'About us' %}</a>
                     </li>
                     <li
                         class="font-semibold text-[#3c3c3b] hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
-                        <a href="{% url 'website:contact' %}">Contact</a>
+                        <a href="{% url 'website:contact' %}">{% translate 'Contact' %}</a>
                     </li>
                 </ul>
 
