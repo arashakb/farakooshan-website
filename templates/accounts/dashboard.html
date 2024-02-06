@@ -3,7 +3,7 @@
 
 {% block content %}
 
-    <div class="bg-[#f1f1f1] text-[#444444]">
+    <!-- <div class="bg-[#f1f1f1] text-[#444444]">
         <div class="sidenav bg-white w-10/12 ml-auto mr-auto mt-10 mb-10 p-9">
             <h1 class="font-semibold text-lg pt-2 pb-3">My Account</h1>
             <div class="grid grid-cols-3">
@@ -46,6 +46,74 @@
             </div>
             
         </div>
+    </div> -->
+       
+<div class="bg-[#f1f1f1] text-[#444444] sidenav bg-white w-10/12 ml-auto mr-auto mt-10 mb-10 p-9">
+    <h1 class="font-semibold text-lg pt-2 pb-3">My Account</h1> 
+    <div class="md:grid md:grid-cols-3">
+        <div class="md:col-span-1">
+            <ul class="space-y space-y-4 text-sm font-medium text-gray-500 dark:text-gray-400 md:me-4 mb-4 md:mb-0" id="default-tab" data-tabs-toggle="#default-tab-content" role="tablist">
+                <li role="presentation">
+                    <button class="inline-flex items-center px-4 py-3 text-white rounded-lg hover:text-gray-900 hover:bg-gray-100 w-full" id="profile-tab" data-tabs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">
+                        <div class="mr-1 text-[#005797] ">
+                            <i data-feather="chevron-right"></i>
+                        </div>Dashboard
+                    </button>
+                </li>
+                <li role="presentation">
+                    <button class="inline-flex items-center px-4 py-3 rounded-lg hover:text-gray-900 hover:bg-gray-100 w-full" id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="false">
+                        <div class="mr-1 text-[#005797] ">
+                            <i data-feather="chevron-right"></i>
+                        </div>
+                        Orders
+                    </button>
+                </li>
+                <li role="presentation">
+                    <button class="inline-flex items-center px-4 py-3 rounded-lg hover:text-gray-900 hover:bg-gray-100 w-full" id="settings-tab" data-tabs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">
+                        <div class="mr-1 text-[#005797] ">
+                            <i data-feather="chevron-right"></i>
+                        </div>
+                        Account Details
+                    </button>
+                </li>
+                <li class="presentation">
+                    <button class="inline-flex items-center px-4 py-3 rounded-lg hover:text-gray-900 hover:bg-gray-100 w-full" id="settings-tab" data-tabs-target="#settings2" type="button" role="tab" aria-controls="settings2" aria-selected="false">
+                        <div class="mr-1 text-[#005797] ">
+                            <i data-feather="chevron-right"></i>
+                        </div>
+                        log out
+                    </button>
+                </li>
+        
+            </ul>
+        </div>
+        
+        <div id=" px-9 col-span-3 w-full">
+            <div class="hidden px-4 rounded-lg " id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                <p class="text-sm">
+                    Hello armanakbari456 (not armanakbari456? Log out) From your account dashboard you can view your recent orders, manage your shipping and billing addresses, and edit your password and account details.             
+                </p>
+            </div>
+            <div class="hidden px-4 rounded-lg " id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+                <p class="text-sm">
+                    This is the text for order This is the text for order This is the text for order This is the text for order This is the text for order This is the text for order This is the text for order This is the text for order This is the text for order This is the text for order This is the text for order This is the text for order This is the text for order This is the text for order This is the text for order This is the text for order
+                </p>
+            </div>
+            <div class="hidden px-4 rounded-lg " id="settings" role="tabpanel" aria-labelledby="settings-tab">
+                <p class="text-sm">
+                    sldkfjlkef  eflkjds lfk ewoif lkdjf  sldkfjlkef  eflkjds lfk ewoif lkdjf  sldkfjlkef  eflkjds lfk ewoif lkdjf  sldkfjlkef  eflkjds lfk ewoif lkdjf  sldkfjlkef  eflkjds lfk ewoif lkdjf  sldkfjlkef  eflkjds lfk ewoif lkdjf  sldkfjlkef  eflkjds lfk ewoif lkdjf  sldkfjlkef  eflkjds lfk ewoif lkdjf  sldkfjlkef  eflkjds lfk ewoif lkdjf  sldkfjlkef  eflkjds lfk ewoif lkdjf  sldkfjlkef  eflkjds lfk ewoif lkdjf  sldkfjlkef  eflkjds lfk ewoif lkdjf 
+                </p>        
+            </div>
+            <div class="hidden px-4 rounded-lg " id="settings2" role="tabpanel" aria-labelledby="settings2-tab">
+                <p class="text-sm">
+                    lkr v ke dlkfj oe lkd fk jeo ifjlk jlk
+                </p>        
+            </div>
+        </div>
     </div>
+    
+</div>
+
+
 
 {% endblock %}
