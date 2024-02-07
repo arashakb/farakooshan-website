@@ -1,11 +1,12 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
 
 {% block content %}
 
 <div class="bg-[#f1f1f1]">
     <div class="flex px-10">   
-        <h1 class="text-3xl font-bold m-2">Articles</h1>
+        <h1 class="text-3xl font-bold m-2">{% translate 'Articles' %}</h1>
         <div class="ml-auto mt-3 h-20">
             <form action="#" class="w-full flex">
                 <input class="blog-search rounded-e-md h-10" type="text" placeholder=" Search Courses" name="search">
