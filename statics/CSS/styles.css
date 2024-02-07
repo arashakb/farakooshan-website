@@ -1596,6 +1596,13 @@ ul.submenu li:hover .subsubmenu{
 .blog-search {
   padding-top: 10px;
   padding-bottom: 10px;
+
+}
+
+.blog-search-button {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 6px
 }
 
 .hover\:border-gray-300:hover {
