@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from course.models import Category
 from django.utils.translation import activate
@@ -7,7 +7,7 @@ from django.utils.translation import activate
 def home_view(request):
     categories = Category.objects.all()
     context = {"categories": categories}
-    activate('en')
+    # activate('en')
     return render(request, 'website/index.html', context)
 
 def about_view(request):
@@ -15,3 +15,7 @@ def about_view(request):
 
 def contact_view(request):
     return render(request, 'website/contact.html')
+
+def change_lang(request):
+    activate(request.GET.get('lang'))
+    return redirect(request.GET.get('next'))
