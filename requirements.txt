@@ -7,4 +7,5 @@ django-taggit
 django-utils-six
 Faker
 django-compressor
-django-deug-toolbar
+django-debug-toolbar
+django-ckeditor
