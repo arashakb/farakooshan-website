@@ -9,3 +9,4 @@ Faker
 django-compressor
 django-debug-toolbar
 django-ckeditor
+django-translated-fields

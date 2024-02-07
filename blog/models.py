@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from ckeditor.fields import RichTextField
+from translated_fields import TranslatedField
 # Create your models here.
 class Category(models.Model):
     name = models.CharField(max_length=255)
@@ -10,8 +11,8 @@ class Category(models.Model):
 class Post(models.Model):
     image = models.ImageField(upload_to='blog/', default='blog/default.jpg')
     author = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
-    title = models.CharField(max_length=255)
-    content = RichTextField(blank=True, null=True)
+    title = TranslatedField(models.CharField(max_length=255))
+    content = TranslatedField(RichTextField(blank=True, null=True))
     # tag 
     category = models.ManyToManyField(Category)
     # course
