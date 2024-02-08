@@ -94,7 +94,7 @@
                             <ul class="dropdown-content absolute hidden pt-1">
                                 {% for category in categories %}
                                 <li class="dropdown">
-                                    <a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="{% url 'course:single' category.id %}">{{category.name}} Courses</a>
+                                    <a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="{% url 'course:single' category.id %}">{{category.name}}</a>
                                     <ul class="dropdown-content dropdown-content-second absolute hidden text-gray-700 pl-5 -mt-10 ">
 
                                         <li><a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="{% url 'course:single' category.id %}">Courses</a>
