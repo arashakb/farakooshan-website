@@ -88,27 +88,27 @@
         <div class="bg-gray-50 text-[#3c3c3b] p-4 course-tabs" id="profile" role="tabpanel"
             aria-labelledby="profile-tab">
             <p class="text-sm text-[#3c3c3b]">
-                {{course.content|linebreaks}}
+                {{course.content|safe}}
             </p>
         </div>
         <div class="bg-gray-50 text-[#3c3c3b] p-4 rounded-lg hidden " id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
             <p class="text-sm text-[#3c3c3b]">
-                {{course.description|linebreaks}}
+                {{course.description|safe}}
             </p>
         </div>
         <div class="bg-gray-50 text-[#3c3c3b] p-4 rounded-lg hidden" id="settings" role="tabpanel" aria-labelledby="settings-tab">
             <p class="text-sm text-[#3c3c3b]">
-                {{course.objectives|linebreaks}}
+                {{course.objectives|safe}}
             </p>
         </div>
         <div class="bg-gray-50 text-[#3c3c3b] p-4 rounded-lg hidden" id="contacts" role="tabpanel" aria-labelledby="contacts-tab">
             <p class="text-sm text-[#3c3c3b]">
-                {{course.whoshouldattend|linebreaks}}
+                {{course.whoshouldattend|safe}}
             </p>
         </div>
         <div class="bg-gray-50 text-[#3c3c3b] p-4 rounded-lg hidden" id="contacts2" role="tabpanel" aria-labelledby="contacts2-tab">
             <p class="text-sm text-[#3c3c3b]">
-                {{course.cpdunit|linebreaks}}
+                {{course.cpdunit|safe}}
             </p>
         </div>
         <div class="bg-gray-50text-[#3c3c3b] p-4 rounded-lg hidden" id="movies" role="tabpanel" aria-labelledby="movies-tab">

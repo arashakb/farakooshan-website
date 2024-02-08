@@ -9,7 +9,7 @@ def categories_view(request):
 
 def category_single(request, pid):
     courses = get_object_or_404(Category,pk=pid).course_set.all()
-    category = get_object_or_404(Category,pk=pid).name
+    category = get_object_or_404(Category,pk=pid)
     context = {'courses': courses, 'category_pid': pid, 'category': category}
     return render(request, 'category/category-single.html', context)
 

@@ -5,10 +5,9 @@
 
 <div class="grid md:grid-cols-4 text-white hero-courses  md:pr-0  bg-[#444444] ">
     <div class="text-center lg:text-left mt-16 md:col-span-3 px-24">
-        <h1 class="font-semibold text-white text-3xl md:text-6xl leading-normal mb-6">{{category}} Courses</h1>
+        <h1 class="font-semibold text-white text-3xl md:text-6xl leading-normal mb-6">{{category.name}}</h1>
         <p class="font-light text-md md:text-lg leading-normal mb-12">
-            As Oil and Gas Training Providers, we develop and deliver oil and gas training at our locations in London and Aberdeen, United Kingdom; Dubai, United Arab Emirates, Kuala Lumpur, Malaysia and Houston, Texas, United States. But we can also deliver training courses at our clients location based on request.
-            All our training courses can be delivered at a basic, intermediate or advanced level, depending on the attending delegates or organisational requirements.
+            {{category.content|safe}}
         </p>
         <button class="mb-12 px-6 py-4 bg-[#005797] font-semibold text-white text-lg rounded-xl hover:bg-[#005797] transition ease-in-out duration-500">
             Enrolment
