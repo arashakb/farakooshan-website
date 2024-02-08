@@ -13,7 +13,7 @@
             {% translate 'Oil & Gas Training Courses Online & In-Person' %}
         </p>
         <button class="mb-12 px-6 py-4 bg-[#005797] font-semibold text-white text-lg rounded-xl hover:bg-[#005797] transition ease-in-out duration-500">
-            View course directory
+        {% blocktranslate %} View course directory {% endblocktranslate %} 
         </button>
     </div>
 </div>
@@ -24,7 +24,7 @@
         <a href="#">
             <div class="overlay absolute top-0 bottom-0 left-0 right-0"></div>
                 <img class="img--underHero" src="{% static 'images/back1.jpg' %}" alt="working">
-                <h1 class="absolute top-0 mt-3 ml-3 text-xl md:text-2xl text">{% translate 'Bespoken Training Course' %}</h1>
+                <h1 class="absolute top-0 mt-3 ml-3 text-xl md:text-2xl text">{% translate 'Bespoke Training Course' %}</h1>
                 <div class="absolute bottom-0 right-0 w-16 py-4 flex justify-center bg-[#005797] text-white">
                     <i data-feather="chevron-right"></i>
                 </div>
@@ -35,7 +35,7 @@
         <a href="#">
             <div class="group overlay absolute top-0 bottom-0 left-0 right-0"></div>
                 <img class="img--underHero" src="{% static 'images/back1.jpg' %}" alt="working">
-                <h1 class="absolute top-0 mt-3 ml-3 text-xl md:text-2xl text">{% translate 'Bespoken Training Course' %}</h1>
+                <h1 class="absolute top-0 mt-3 ml-3 text-xl md:text-2xl text">{% translate 'Oil and Gas Consultancy Services' %}</h1>
                 <div class="absolute bottom-0 right-0 w-16 py-4 flex justify-center bg-[#005797] text-white group-hover:bg-white group-hover:text-[#005797]">
                     <i data-feather="chevron-right"></i>
                 </div>
@@ -47,18 +47,19 @@
 <section class="w-full bg-white">
     <div class="bg-white AboutCard py-8 md:mt-10 flex items-center justify-center text-[#3c3c3b]">
         <div class="text-center">
-            <h3 class="text-4xl text-center p-3">Oil & Gas Consultancy Services</h3>
+            <h3 class="text-4xl text-center p-3">{% blocktranslate %} We are Accredited by the British Accreditation Council for Independent
+                Further and Higher Education as a Short Course Provider {% endblocktranslate %}</h3>
             <p class="text-center">
-                Mobility Oil and Gas Petroleum Engineering consultancy offers full life cycle services covering
+                {% blocktranslate %} Mobility Oil and Gas Petroleum Engineering consultancy offers full life cycle services covering
                 Technical and Commercial Evaluation of Potential Fields, Exploration and Appraisal, Field Development
-                and Production.
+                and Production.{% endblocktranslate %}
             </p>
-            <h5 class="text-2xl text-center p-3">Field Management (Field Development & Operations)</h5>
+            <h5 class="text-2xl text-center p-3">{% translate 'Field Management (Field Development & Operations)' %}</h5>
             <p class="text-center">
-                Our team is equipped with the requisite skills, experience and tools required to assist and guide our
+                {% blocktranslate %}Our team is equipped with the requisite skills, experience and tools required to assist and guide our
                 clients to maximize value from assets at every stage and the whole spectrum of the hydrocarbon
                 maturation funnel (exploration to production). We are also tooled to provide services in field
-                management to maximize recovery from both new and mature fields.
+                management to maximize recovery from both new and mature fields.{% endblocktranslate %}
             </p>
             <br /><br />
             <button class="home-about-btn px-3 py-1 bg-white font-semibold text-[#005797] text-lg rounded-sm hover:bg-[#005797] hover:text-white transition ease-in-out duration-500 border border-[#005797]">About</button>
@@ -74,9 +75,9 @@
 <!-- course categories -->
 <section class="py-10 md:mt-10 bg-[#444444] ">
     <div class="container max-w-screen-xl mx-auto px-4">
-        <p class="font-light text-gray-100 text-lg md:text-xl text-center uppercase mb-6">Courses</p>
-        <h1 class="font-semibold text-gray-100 text-xl md:text-2xl text-center leading-normal mb-10">Course
-            Categories
+        <p class="font-light text-gray-100 text-lg md:text-xl text-center uppercase mb-6">{% translate 'Courses' %}</p>
+        <h1 class="font-semibold text-gray-100 text-xl md:text-2xl text-center leading-normal mb-10">
+            {% translate 'Course Categories' %}
         </h1>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 relative">
         {% for category in categories %}
@@ -85,7 +86,7 @@
                     <h4 class="font-semibold text-base md:text-1xl">{{category.name}}</h4>
                 </div>
                 <p class="group-hover:text-gray-200 font-light text-gray-500 text-md md:text-xl mb-12">
-                    {{category.course_set.count}} Courses
+                    {{category.course_set.count}} {% translate 'Courses' %}
                 </p>
 
                 <div class="group-hover:text-gray-200 transition duration-100 flex justify-center bottom-0 course-category-cards-learnmore">
@@ -105,7 +106,7 @@
 
 <!-- clients -->
 <section class="mt-11">
-    <h1 class="text-center text-xl font-semibold our-client">Our Client</h1>
+    <h1 class="text-center text-xl font-semibold our-client">{% translate 'Our Client' %}</h1>
     <div class="grid grid-cols-4 px-24 py-10">
         <img class="w-48" src="{% static 'images/Clients/pdvsa_logo (1).webp' %}" alt="">
         <img class="w-48" src="{% static 'images/Clients/l-oceaneering.webp' %}" alt="">
@@ -116,29 +117,27 @@
 
 <!-- testemonials -->
 <div class="bg-gray-100 p-7 md:p-24">
-    <h1 class="text-3xl font-bold justify-center text-center">Why our clients choose us?</h1><br/>
+    <h1 class="text-3xl font-bold justify-center text-center">{% translate 'Why our clients choose us?' %}</h1><br/>
     <section class="grid md:grid-cols-3 gap-10">
         <div class="bg-white hover:bg-[#005797] hover:text-white col-span-1 p-10 text-center transition ease-in-out duration-500">
-            <p>Good course. I learnt about ICDs & ICVs system with new and old fashion multiphase sensors. Also,
-                case studies of intelligent, Reservoir Monitoring, subsea system etc my opinion in all is very good.
+            <p>{% blocktranslate %} Good course. I learnt about ICDs & ICVs system with new and old fashion multiphase sensors. Also,
+                case studies of intelligent, Reservoir Monitoring, subsea system etc my opinion in all is very good.{% endblocktranslate%}
             </p>
             <br/>
-            <h1 class="text-xl font-semibold">Arman Akbari</h1>
+            <h1 class="text-xl font-semibold">{% translate 'Arman Akbari' %}</h1>
         </div>
 
         <div class="bg-white hover:bg-[#005797] hover:text-white col-span-1 p-10 text-center transition ease-in-out duration-500">
-            <p>Good course. I learnt about ICDs & ICVs system with new and old fashion multiphase sensors. Also,
-                case studies of intelligent, Reservoir Monitoring, subsea system etc my opinion in all is very good.
-            </p>
+            <p>{% blocktranslate %} Good course. I learnt about ICDs & ICVs system with new and old fashion multiphase sensors. Also,
+                case studies of intelligent, Reservoir Monitoring, subsea system etc my opinion in all is very good.{% endblocktranslate %}           </p>
             <br/>
-            <h1 class="text-xl font-semibold">Arman Akbari</h1>
+            <h1 class="text-xl font-semibold">{% translate 'Arman Akbari' %}</h1>
         </div>
         <div class="bg-white hover:bg-[#005797] hover:text-white col-span-1 p-10 text-center transition ease-in-out duration-500">
-            <p>Good course. I learnt about ICDs & ICVs system with new and old fashion multiphase sensors. Also,
-                case studies of intelligent, Reservoir Monitoring, subsea system etc my opinion in all is very good.
+            <p>{% blocktranslate %}I really enjoyed this course. Great Workshops!{% endblocktranslate %}
             </p>
             <br/>
-            <h1 class="text-xl font-semibold">Arman Akbari</h1>
+            <h1 class="text-xl font-semibold">{% translate 'Arash Akbari' %}</h1>
         </div>
     </section>
 

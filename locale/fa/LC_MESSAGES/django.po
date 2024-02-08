@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-07 23:04+0330\n"
+"POT-Creation-Date: 2024-02-08 23:03+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: .\farakooshan_website\settings.py:100
+msgid "Persian"
+msgstr ""
+
+#: .\farakooshan_website\settings.py:101
+msgid "English"
+msgstr ""
 
 #: .\templates\base.html:23
 msgid "Farakooshan"
@@ -47,7 +55,8 @@ msgstr "فراکوشان"
 msgid "Home"
 msgstr "خانه"
 
-#: .\templates\base.html:92
+#: .\templates\base.html:92 .\templates\website\index.html:78
+#: .\templates\website\index.html:89
 msgid "Courses"
 msgstr "دوره ها"
 
@@ -55,7 +64,8 @@ msgstr "دوره ها"
 msgid "Consultancy"
 msgstr "مشاوره"
 
-#: .\templates\base.html:119 .\templates\blog\blog-single.html:9
+#: .\templates\base.html:119 .\templates\blog\blog-home.html:9
+#: .\templates\blog\blog-single.html:9
 msgid "Articles"
 msgstr "مقالات"
 
@@ -67,6 +77,32 @@ msgstr "درباره ما"
 msgid "Contact"
 msgstr "تماس با ما"
 
+#: .\templates\category\category-home.html:10
+msgid "Course Directory"
+msgstr "دسته بندی دروس"
+
+#: .\templates\category\category-home.html:12
+msgid ""
+" As Oil and Gas Training Providers, we develop and deliver oil and gas "
+"training at our locations in London and Aberdeen, United Kingdom; Dubai, "
+"United Arab Emirates, Kuala Lumpur, Malaysia and Houston, Texas, United "
+"States. But we can also deliver training courses at our clients location "
+"based on request.\n"
+"            All our training courses can be delivered at a basic, "
+"intermediate or advanced level, depending on the attending delegates or "
+"organisational requirements. "
+msgstr ""
+"ما به عنوان ارائه دهندگان آموزش نفت و گاز، آموزش نفت و گاز را در مکان های "
+"خود در لندن و آبردین، بریتانیا توسعه داده و ارائه می دهیم. دبی، امارات متحده "
+"عربی، کوالالامپور، مالزی و هیوستون، تگزاس، ایالات متحده. اما ما همچنین می "
+"توانیم دوره های آموزشی را در محل مشتریان خود بر اساس درخواست ارائه دهیم. همه "
+"دوره های آموزشی ما بسته به نمایندگان شرکت کننده یا نیازهای سازمانی می توانند "
+"در سطوح پایه، متوسط ​​یا پیشرفته ارائه شوند."
+
+#: .\templates\category\category-home.html:16
+msgid "View course directory"
+msgstr "دیدن دسته بندی دروس"
+
 #: .\templates\website\index.html:11
 msgid "Frakooshan Ltd"
 msgstr "شرکت فراکوشان"
@@ -75,9 +111,93 @@ msgstr "شرکت فراکوشان"
 msgid "Oil & Gas Training Courses Online & In-Person"
 msgstr "دوره های آموزشی نفت و گاز به صورت آنلاین و حضوری"
 
+#: .\templates\website\index.html:16
+msgid " View course directory "
+msgstr "دیدن دسته بندی دروس"
+
 #: .\templates\website\index.html:27
-msgid "Bespoken Training Course"
+msgid "Bespoke Training Course"
+msgstr "دوره آمورشی شخصی سازی شده"
+
+#: .\templates\website\index.html:38
+msgid "Oil and Gas Consultancy Services"
+msgstr "خدمات مشاوره نفت و گاز"
+
+#: .\templates\website\index.html:50
+msgid ""
+" We are Accredited by the British Accreditation Council for Independent\n"
+"                Further and Higher Education as a Short Course Provider "
 msgstr ""
+"ما توسط شورای اعتباربخشی بریتانیا برای مستقل تایید شده ایم. آموزش تکمیلی و "
+"عالی به عنوان ارائه دهنده دوره های کوتاه مدت."
+
+#: .\templates\website\index.html:53
+msgid ""
+" Mobility Oil and Gas Petroleum Engineering consultancy offers full life "
+"cycle services covering\n"
+"                Technical and Commercial Evaluation of Potential Fields, "
+"Exploration and Appraisal, Field Development\n"
+"                and Production."
+msgstr ""
+"مشاوره مهندسی نفت و گاز Mobility خدمات کامل چرخه عمر را ارائه می دهد که شامل "
+"ارزیابی فنی و تجاری زمینه های بالقوه، اکتشاف و ارزیابی، توسعه و تولید میدان "
+"می شود."
+
+#: .\templates\website\index.html:57
+msgid "Field Management (Field Development & Operations)"
+msgstr "مدیریت میدانی (توسعه میدانی و عملیات)"
+
+#: .\templates\website\index.html:59
+msgid ""
+"Our team is equipped with the requisite skills, experience and tools "
+"required to assist and guide our\n"
+"                clients to maximize value from assets at every stage and the "
+"whole spectrum of the hydrocarbon\n"
+"                maturation funnel (exploration to production). We are also "
+"tooled to provide services in field\n"
+"                management to maximize recovery from both new and mature "
+"fields."
+msgstr ""
+"تیم ما مجهز به مهارت‌ها، تجربه و ابزارهای لازم برای کمک و راهنمایی مشتریان "
+"خود برای به حداکثر رساندن ارزش دارایی‌ها در هر مرحله و کل طیف قیف بلوغ "
+"هیدروکربنی (اکتشاف تا تولید) است. ما همچنین برای ارائه خدمات در مدیریت "
+"میدانی برای به حداکثر رساندن بازیابی از هر دو زمینه جدید و بالغ، ابزاری "
+"هستیم."
+
+#: .\templates\website\index.html:80
+msgid "Course Categories"
+msgstr "دسته بندی دوره های آموزشی"
+
+#: .\templates\website\index.html:109
+msgid "Our Client"
+msgstr "مشتریان ما"
+
+#: .\templates\website\index.html:120
+msgid "Why our clients choose us?"
+msgstr "چرا مشتریان ما را انتخاب می کنند؟"
+
+#: .\templates\website\index.html:123 .\templates\website\index.html:131
+msgid ""
+" Good course. I learnt about ICDs & ICVs system with new and old fashion "
+"multiphase sensors. Also,\n"
+"                case studies of intelligent, Reservoir Monitoring, subsea "
+"system etc my opinion in all is very good."
+msgstr ""
+"دوره خوب من در مورد سیستم ICD و ICV با سنسورهای چند فازی مد جدید و قدیمی یاد "
+"گرفتم. همچنین، مطالعات موردی هوشمند، نظارت بر مخزن، سیستم زیردریایی و غیره "
+"به نظر من در همه چیز بسیار خوب است."
+
+#: .\templates\website\index.html:127 .\templates\website\index.html:134
+msgid "Arman Akbari"
+msgstr "آرمان اکبری"
+
+#: .\templates\website\index.html:137
+msgid "I really enjoyed this course. Great Workshops!"
+msgstr "دوره ی بسیار خوبی بود. به همه پیشنهاد می کنم."
+
+#: .\templates\website\index.html:140
+msgid "Arash Akbari"
+msgstr "آرش اکبری"
 
 #: .\venv\Lib\site-packages\ckeditor_uploader\forms.py:6
 msgid "Search files"
@@ -1323,3 +1443,19 @@ msgstr ""
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:249
 msgid "Connect, get help, or contribute"
 msgstr ""
+
+#, fuzzy
+#~| msgid ""
+#~| " Good course. I learnt about ICDs & ICVs system with new and old fashion "
+#~| "multiphase sensors. Also,\n"
+#~| "                case studies of intelligent, Reservoir Monitoring, "
+#~| "subsea system etc my opinion in all is very good."
+#~ msgid ""
+#~ "Good course. I learnt about ICDs & ICVs system with new and old fashion "
+#~ "multiphase sensors. Also,\n"
+#~ "                case studies of intelligent, Reservoir Monitoring, subsea "
+#~ "system etc my opinion in all is very good."
+#~ msgstr ""
+#~ "دوره خوب من در مورد سیستم ICD و ICV با سنسورهای چند فازی مد جدید و قدیمی "
+#~ "یاد گرفتم. همچنین، مطالعات موردی هوشمند، نظارت بر مخزن، سیستم زیردریایی و "
+#~ "غیره به نظر من در همه چیز بسیار خوب است."
