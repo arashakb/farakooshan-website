@@ -1,4 +1,20 @@
+
 body {
     direction: rtl;
     text-align: right;
+}
+.panel-subtitle{
+    margin-left: auto;
+    right: 0;
+    text-align: initial;
+}
+.enfa{
+    margin-left: auto;
+    margin-right: 0px;
+}
+@font-face { 
+    font-family: Iraninasanse; src: url('../fonts/FontsFree-Net-ir_sans.ttf'); 
+} 
+*{
+    font-family: Iraninasanse;
 }
