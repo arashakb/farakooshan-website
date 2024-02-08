@@ -12,7 +12,7 @@
     {% if LANGUAGE_CODE == 'fa' %}
     <link rel="stylesheet" href="{% static 'CSS/rtl.css' %}">
     {% endif %}
-
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js"
         integrity="sha512-7x3zila4t2qNycrtZ31HO0NnJr8kg2VI67YLoRSyi9hGhRN66FHYWr7Axa9Y1J9tGYHVBPqIjSE1ogHrJTz51g=="
@@ -26,8 +26,8 @@
 <body class="font-body bg-[#f1f1f1]">
 
     <!-- navbar section -->
-    <section class="bg-white">
-        <div>
+    <section class="bg-white navbarsection">
+        <div class="navbarsection">
             
             <div class="p-1 border-b-2 lg:flex flex-col md:flex-row md:items-center text-center md:space-x-6 justify-center md:justify-end"
                 :class="{'hidden':!navbarOpen,'flex':navbarOpen}">
@@ -80,10 +80,9 @@
                     </button>
 
                 </div>
-                <ul class="lg:flex flex-col lg:flex-row lg:items-center lg:space-x-8 xl:space-x-14 justify-end main-menu-ul"
+                <ul class="font-bold lg:flex flex-col lg:flex-row lg:items-center lg:space-x-8 xl:space-x-14 justify-end main-menu-ul"
                     :class="{'hidden':!navbarOpen,'flex':navbarOpen}">
-                    <li
-                        class="font-semibold text-[#3c3c3b] hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
+                    <li class="font-semibold text-[#3c3c3b] hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0 main-menu-ul-home">
                         <a href="{% url 'website:index' %}">{% translate 'Home' %}</a>
                     </li>
                     <li class="font-semibold text-[#252525] hover:text-[#252525] transition ease-in-out duration-100 mb-5 lg:mb-0">
@@ -96,7 +95,6 @@
                                 <li class="dropdown">
                                     <a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="{% url 'course:single' category.id %}">{{category.name}}</a>
                                     <ul class="dropdown-content dropdown-content-second absolute hidden text-gray-700 pl-5 -mt-10 ">
-
                                         <li><a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="{% url 'course:single' category.id %}">Courses</a>
                                         <li><a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">References & Training material</a>
                                         <li><a class="bg-[#f1f1f1] hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Assesments</a>
