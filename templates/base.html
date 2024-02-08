@@ -31,7 +31,7 @@
             
             <div class="p-1 border-b-2 lg:flex flex-col md:flex-row md:items-center text-center md:space-x-6 justify-center md:justify-end"
                 :class="{'hidden':!navbarOpen,'flex':navbarOpen}">
-                <div class="mr-auto p-2">
+                <div class="p-2 enfa">
                     <a href="{% url 'change_lang' %}?lang=en&next=/en/{{request.path|slice:'4:'}}">EN</a> / 
                     <a href="{% url 'change_lang' %}?lang=fa&next=/fa/{{request.path|slice:'4:'}}">FA</a>
                 </div>
