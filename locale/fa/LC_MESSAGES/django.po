@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-08 23:03+0330\n"
+"POT-Creation-Date: 2024-02-09 11:22+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -51,29 +51,29 @@ msgstr "سبد خرید"
 msgid "arakooshan"
 msgstr "فراکوشان"
 
-#: .\templates\base.html:87
+#: .\templates\base.html:86
 msgid "Home"
 msgstr "خانه"
 
-#: .\templates\base.html:92 .\templates\website\index.html:78
+#: .\templates\base.html:91 .\templates\website\index.html:78
 #: .\templates\website\index.html:89
 msgid "Courses"
-msgstr "دوره ها"
+msgstr "دوره"
 
-#: .\templates\base.html:115
+#: .\templates\base.html:113
 msgid "Consultancy"
 msgstr "مشاوره"
 
-#: .\templates\base.html:119 .\templates\blog\blog-home.html:9
+#: .\templates\base.html:117 .\templates\blog\blog-home.html:9
 #: .\templates\blog\blog-single.html:9
 msgid "Articles"
 msgstr "مقالات"
 
-#: .\templates\base.html:123
+#: .\templates\base.html:121
 msgid "About us"
 msgstr "درباره ما"
 
-#: .\templates\base.html:127 .\templates\website\contact.html:7
+#: .\templates\base.html:125 .\templates\website\contact.html:7
 msgid "Contact"
 msgstr "تماس با ما"
 
@@ -102,6 +102,10 @@ msgstr ""
 #: .\templates\category\category-home.html:16
 msgid "View course directory"
 msgstr "دیدن دسته بندی دروس"
+
+#: .\templates\category\category-home.html:30
+msgid "courses available"
+msgstr "دوره در دسترس"
 
 #: .\templates\website\index.html:11
 msgid "Frakooshan Ltd"
@@ -164,9 +168,17 @@ msgstr ""
 "میدانی برای به حداکثر رساندن بازیابی از هر دو زمینه جدید و بالغ، ابزاری "
 "هستیم."
 
+#: .\templates\website\index.html:65
+msgid "About"
+msgstr "درباره ما"
+
 #: .\templates\website\index.html:80
 msgid "Course Categories"
 msgstr "دسته بندی دوره های آموزشی"
+
+#: .\templates\website\index.html:94
+msgid "Learn more"
+msgstr "بیشتر بخوانید"
 
 #: .\templates\website\index.html:109
 msgid "Our Client"
@@ -1395,9 +1407,10 @@ msgid "“%(path)s” does not exist"
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\views\static.py:80
-#, python-format
+#, fuzzy, python-format
+#| msgid "View course directory"
 msgid "Index of %(directory)s"
-msgstr ""
+msgstr "دیدن دسته بندی دروس"
 
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:7
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:221

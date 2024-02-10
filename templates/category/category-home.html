@@ -27,7 +27,7 @@
             <h3 class="text-xl font-semibold">{{category.name}}</h3>
             <p class="text-xs mt-3">{{category.content|safe}}</p>
             <br />
-            <h4 class="absolute bottom-0 left-0 text-gray-400 ml-5 mb-5 mt-6">21 courses available</h4>
+            <h4 class="absolute bottom-0 left-0 text-gray-400 ml-5 mb-5 mt-6"> {{category.course_set.count}} {% translate 'courses available' %}</h4>
             <div class="absolute bottom-0 right-0 w-12 py-4 flex justify-center bg-[#005797] text-white">
                 <i data-feather="chevron-right"></i>
             </div>
